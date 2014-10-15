@@ -1,10 +1,12 @@
-package com.saulmm.material.myapplication;
+package com.saulmm.material;
 
 import android.app.Activity;
 import android.graphics.Outline;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.saulmm.material.R;
 
 
 public class MyActivity extends Activity {
