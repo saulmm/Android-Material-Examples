@@ -10,12 +10,15 @@
         <activity
             android:name=".MyActivity"
             android:label="" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+        </activity>
+        <activity
+            android:name=".MyActivity2"
+            android:label="@string/title_activity_my_activity2" >
         </activity>
     </application>
 

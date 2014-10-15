@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- animate the translationZ property of a view when pressed -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:state_enabled="true"
-        android:state_pressed="true"
-        >
-
-        <objectAnimator
-            android:duration="@android:integer/config_shortAnimTime"
-            android:propertyName="translationZ"
-            android:valueFrom="@dimen/button_elevation"
-            android:valueTo="@dimen/button_press_elevation"
-            android:valueType="floatType"
-            />
+    <item android:state_pressed="true">
+        <set>
+            <objectAnimator android:propertyName="translationZ"
+                android:duration="100"
+                android:valueTo="2"
+                android:valueType="floatType"/>
+            <!-- you could have other objectAnimator elements
+                 here for "x" and "y", or other properties -->
+        </set>
     </item>
-    <item>
-
-        <objectAnimator
-            android:duration="@android:integer/config_shortAnimTime"
-            android:propertyName="translationZ"
-            android:valueFrom="@dimen/button_press_elevation"
-            android:valueTo="@dimen/button_elevation"
-            android:valueType="floatType"
-            />
+    <item android:state_enabled="true"
+        android:state_pressed="false"
+        android:state_focused="true">
+        <set>
+            <objectAnimator android:propertyName="translationZ"
+                android:duration="100"
+                android:valueTo="10"
+                android:valueType="floatType"/>
+        </set>
     </item>
 </selector>

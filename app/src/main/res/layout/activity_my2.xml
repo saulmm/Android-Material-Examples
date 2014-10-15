@@ -10,24 +10,31 @@
     <View
         android:id="@+id/holder_view"
         android:layout_width="match_parent"
-        android:layout_height="144dp"
-        android:viewName="holder1"
-        android:background="?android:colorPrimary"
-        />
+        android:layout_height="250dp"
+        android:viewName="holder2"
+        android:background="?android:colorPrimary"/>
 
     <Button
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/fab_button"
-        android:viewName="fab"
         android:layout_width="@dimen/fab_size"
+        android:viewName="fab"
         android:layout_height="@dimen/fab_size"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:background="@drawable/ripple_round"
         android:stateListAnimator="@anim/fab_anim"
+        android:src="@drawable/ic_action_add"
         android:elevation="5dp"
-        android:layout_below="@+id/holder_view"
-        android:layout_marginTop="-26dp"
-        android:layout_alignParentEnd="true"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_below="@id/holder_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
 
 </RelativeLayout>
