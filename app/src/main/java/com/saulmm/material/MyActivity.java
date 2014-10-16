@@ -5,6 +5,7 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Outline;
 import android.os.Bundle;
+import android.transition.CircularPropagation;
 import android.transition.Explode;
 import android.transition.Scene;
 import android.transition.Slide;
@@ -30,13 +31,19 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
+        Explode ex = new Explode();
+        ex.setPropagation(new CircularPropagation());
+
+        getWindow().setExitTransition(ex);
+        getWindow().setEnterTransition(ex);
+
         // Fab Button
         int fabSize = getResources().getDimensionPixelSize(R.dimen.fab_size);
         Outline fabOutLine = new Outline();
         fabOutLine.setOval(0, 0, fabSize, fabSize);
 
         // Fragment container
-         frameContainer = (FrameLayout) findViewById(R.id.container);
+        frameContainer = (FrameLayout) findViewById(R.id.container);
 
         holderView = findViewById(R.id.holder_view);
 
@@ -54,8 +61,9 @@ public class MyActivity extends Activity {
                     Pair.create(holderView, "holder2"),
                     Pair.create(fabButton, "fab"));
 
+
             Intent i  = new Intent (MyActivity.this, MyActivity2.class);
-            startActivity(i, options.toBundle());
+            startActivity(i);
         }
     };
 }

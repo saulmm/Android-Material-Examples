@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.graphics.Outline;
 import android.os.Bundle;
 import android.transition.ChangeBounds;
+import android.transition.CircularPropagation;
 import android.transition.Explode;
 import android.transition.Scene;
 import android.transition.Slide;
@@ -27,6 +28,12 @@ public class MyActivity2 extends Activity {
         // Fab Button
         int fabSize = getResources().getDimensionPixelSize(R.dimen.fab_size);
         Outline fabOutLine = new Outline();
+
+        Explode ex = new Explode();
+        ex.setPropagation(new CircularPropagation());
+
+        getWindow().setExitTransition(ex);
+        getWindow().setEnterTransition(ex);
         fabOutLine.setOval(0, 0, fabSize, fabSize);
     }
 
