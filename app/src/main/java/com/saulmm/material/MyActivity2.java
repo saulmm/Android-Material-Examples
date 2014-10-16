@@ -29,11 +29,8 @@ public class MyActivity2 extends Activity {
         int fabSize = getResources().getDimensionPixelSize(R.dimen.fab_size);
         Outline fabOutLine = new Outline();
 
-        Explode ex = new Explode();
-        ex.setPropagation(new CircularPropagation());
+        Utils.configureWindowEnterExitTransition(getWindow());
 
-        getWindow().setExitTransition(ex);
-        getWindow().setEnterTransition(ex);
         fabOutLine.setOval(0, 0, fabSize, fabSize);
     }
 

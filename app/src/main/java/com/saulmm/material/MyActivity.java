@@ -31,11 +31,7 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
-        Explode ex = new Explode();
-        ex.setPropagation(new CircularPropagation());
-
-        getWindow().setExitTransition(ex);
-        getWindow().setEnterTransition(ex);
+        Utils.configureWindowEnterExitTransition(getWindow());;
 
         // Fab Button
         int fabSize = getResources().getDimensionPixelSize(R.dimen.fab_size);
@@ -57,13 +53,9 @@ public class MyActivity extends Activity {
     View.OnClickListener fabClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MyActivity.this,
-                    Pair.create(holderView, "holder2"),
-                    Pair.create(fabButton, "fab"));
 
-
-            Intent i  = new Intent (MyActivity.this, MyActivity2.class);
-            startActivity(i);
+        Intent i  = new Intent (MyActivity.this, MyActivity2.class);
+        startActivity(i);
         }
     };
 }
