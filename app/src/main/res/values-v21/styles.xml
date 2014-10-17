@@ -3,15 +3,11 @@
 
     <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
 
-
         <item name="android:colorPrimary">@color/theme_default_primary</item>
         <item name="android:colorPrimaryDark">@color/theme_default_primary_dark</item>
         <item name="android:statusBarColor">@color/theme_default_primary</item>
         <item name="android:colorAccent">@color/accent</item>
-
         <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowAllowEnterTransitionOverlap">true</item>
-        <item name="android:windowAllowExitTransitionOverlap">true</item>
     </style>
 
 </resources>

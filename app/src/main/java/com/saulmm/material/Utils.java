@@ -1,24 +1,29 @@
 package com.saulmm.material;
 
-import android.transition.CircularPropagation;
+import android.graphics.Outline;
 import android.transition.Explode;
+import android.transition.Slide;
+import android.view.View;
 import android.view.Window;
+import android.view.animation.PathInterpolator;
 
-/**
- * Created by saulmm on 16/10/14.
- */
 public class Utils {
 
     public static void configureWindowEnterExitTransition (Window w) {
 
         Explode ex = new Explode();
-
-        CircularPropagation c = new CircularPropagation();
-        c.setPropagationSpeed(2f);
-
-        ex.setPropagation(c);
-
+        ex.setInterpolator(new PathInterpolator(0.4f, 0, 1, 1));
         w.setExitTransition(ex);
         w.setEnterTransition(ex);
+    }
+
+    public static void configureFab (View fabButton) {
+
+        int fabSize = fabButton.getContext().getResources()
+            .getDimensionPixelSize(R.dimen.fab_size);
+
+        Outline fabOutLine = new Outline();
+        fabOutLine.setOval(0, 0, fabSize, fabSize);
+        fabButton.setOutline(fabOutLine);
     }
 }

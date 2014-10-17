@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:orientation="vertical"
+              tools:context="emmaguy.l.timing.HierarchicalTimingActivity">
+
+    <LinearLayout
+        android:id="@+id/row_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_1"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_2"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_3"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_4"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_5"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_6"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_7"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="64dp"
+            android:id="@+id/view_8"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:background="@color/accent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
