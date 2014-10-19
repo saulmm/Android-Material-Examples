@@ -24,6 +24,5 @@ public class Utils {
 
         Outline fabOutLine = new Outline();
         fabOutLine.setOval(0, 0, fabSize, fabSize);
-        fabButton.setOutline(fabOutLine);
     }
 }

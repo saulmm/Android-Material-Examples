@@ -10,14 +10,14 @@
         android:id="@+id/holder_view"
         android:layout_width="match_parent"
         android:layout_height="144dp"
-        android:viewName="holder1"
+        android:transitionName="holder1"
         android:background="?android:colorPrimary"
         />
 
     <Button
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/fab_button"
-        android:viewName="fab"
+        android:transitionName="fab"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
