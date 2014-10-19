@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 
-public class MyActivity extends Activity {
+public class FirstActivity extends Activity {
 
     private View fabButton;
 
@@ -15,7 +15,7 @@ public class MyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_first);
 
         // Set explode animation when enter and exit the activity
         Utils.configureWindowEnterExitTransition(getWindow());
@@ -31,9 +31,9 @@ public class MyActivity extends Activity {
         @Override
         public void onClick(View view) {
 
-        Intent i  = new Intent (MyActivity.this, MyActivity2.class);
+        Intent i  = new Intent (FirstActivity.this, SecondActivity.class);
 
-        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(MyActivity.this,
+        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(FirstActivity.this,
                 Pair.create(fabButton, "fab"));
 
         startActivity(i, transitionActivityOptions.toBundle());

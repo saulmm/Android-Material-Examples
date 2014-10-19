@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.widget.LinearLayout;
 
-public class MyActivity2 extends Activity {
+public class SecondActivity extends Activity {
 
     private static final int NUM_VIEWS = 5;
     private static final int SCALE_DELAY = 30;
@@ -18,7 +18,7 @@ public class MyActivity2 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_my2);
+        setContentView(R.layout.activity_second);
 
         rowContainer = (LinearLayout) findViewById(R.id.row_container2);
 
