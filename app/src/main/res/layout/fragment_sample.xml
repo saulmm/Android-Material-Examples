@@ -4,6 +4,13 @@
       android:layout_height="match_parent"
       android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?android:colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
     <com.saulmm.material.slidingtabs.views.SlidingTabLayout
           android:id="@+id/sliding_tabs"
           android:layout_width="match_parent"
