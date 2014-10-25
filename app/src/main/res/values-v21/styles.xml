@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
 
+        <!-- android theme colors -->
         <item name="android:colorPrimary">@color/theme_default_primary</item>
         <item name="android:colorPrimaryDark">@color/theme_default_primary_dark</item>
-        <item name="android:statusBarColor">@color/theme_default_primary</item>
+        <item name="android:statusBarColor">@color/theme_default_primary_dark</item>
         <item name="android:colorAccent">@color/accent</item>
+
+        <!-- android transitions -->
         <item name="android:windowContentTransitions">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
@@ -14,6 +17,11 @@
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="SlidingTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">#FFF</item>
     </style>
 
 

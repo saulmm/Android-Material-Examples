@@ -19,6 +19,8 @@ package com.saulmm.material.slidingtabs;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import com.saulmm.material.R;
 
 /**
@@ -28,7 +30,7 @@ import com.saulmm.material.R;
  * For devices with displays with a width of 720dp or greater, the sample log is always visible,
  * on other devices it's visibility is controlled by an item on the Action Bar.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     public static final String TAG = "MainActivity";
 
@@ -46,5 +48,11 @@ public class MainActivity extends Activity {
             transaction.replace(R.id.sample_content_fragment, fragment);
             transaction.commit();
         }
+
+        // Configure toolbar
+        Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mainToolbar);
+        getSupportActionBar().setTitle("Sliding");
+
     }
 }

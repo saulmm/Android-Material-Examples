@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.saulmm.material.R;
@@ -90,13 +91,14 @@ public class SlidingTabsBasicFragment extends Fragment {
      * {@link SlidingTabLayout}.
      */
     class SamplePagerAdapter extends PagerAdapter {
+        final String [] TITLES = {"CATEGORIES", "HOME", "TOP SELLING", "TOP GAMES", "TOP GROSSING"};
 
         /**
          * @return the number of pages to display
          */
         @Override
         public int getCount() {
-            return 10;
+            return 5;
         }
 
         /**
@@ -118,7 +120,7 @@ public class SlidingTabsBasicFragment extends Fragment {
          */
         @Override
         public CharSequence getPageTitle(int position) {
-            return "Item " + (position + 1);
+            return TITLES[position];
         }
         // END_INCLUDE (pageradapter_getpagetitle)
 
@@ -132,13 +134,10 @@ public class SlidingTabsBasicFragment extends Fragment {
             View view = getActivity().getLayoutInflater().inflate(R.layout.pager_item,
                     container, false);
             // Add the newly created View to the ViewPager
+
+
             container.addView(view);
 
-            // Retrieve a TextView from the inflated View, and update it's text
-            TextView title = (TextView) view.findViewById(R.id.item_title);
-            title.setText(String.valueOf(position + 1));
-
-            Log.i(LOG_TAG, "instantiateItem() [position: " + position + "]");
 
             // Return the View
             return view;

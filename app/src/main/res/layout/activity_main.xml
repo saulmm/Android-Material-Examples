@@ -5,6 +5,13 @@
       android:layout_height="match_parent"
       android:id="@+id/sample_main_layout">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?android:colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
     <FrameLayout
           android:id="@+id/sample_content_fragment"
           android:layout_weight="2"
