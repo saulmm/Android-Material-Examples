@@ -15,3 +15,9 @@ Commit - **901d62c**
 Commit - **ead8ada**
 
 ![](https://0b53cc8370cd7638a6bca2ead36937afe31044d3.googledrive.com/host/0B62SZ3WRM2R2aVA4TDVRV04walU/gif-arrow.gif)
+
+## Reusing an example to build a pretty effect like the tab slide of google play app
+
+Commit - **f502305**
+
+![](https://lh5.googleusercontent.com/-N-0aREntDdM/VEvP4I5kxrI/AAAAAAAAvQA/3CRH8pH5Vq4/s1006-no/sliding.gif)
