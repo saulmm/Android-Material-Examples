@@ -5,4 +5,4 @@
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"
     android:background="@color/theme_light"
-    tools:context="com.saulmm.material.NavigationFragment" />
+    tools:context="com.saulmm.material.fragments.NavigationFragment" />

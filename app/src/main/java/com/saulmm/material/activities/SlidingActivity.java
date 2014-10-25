@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.saulmm.material.slidingtabs;
+package com.saulmm.material.activities;
 
 import android.app.FragmentTransaction;
 import android.content.res.Configuration;
@@ -27,12 +27,10 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.saulmm.material.NavigationFragment;
 import com.saulmm.material.R;
+import com.saulmm.material.slidingtabs.fragments.SlidingTabsBasicFragment;
 
-public class MainActivity extends ActionBarActivity {
-
-    public static final String TAG = "MainActivity";
+public class SlidingActivity extends ActionBarActivity {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -40,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sliding);
 
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -105,7 +103,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
         mDrawerToggle.syncState();
     }
 

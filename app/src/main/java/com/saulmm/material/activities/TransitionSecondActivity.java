@@ -1,4 +1,4 @@
-package com.saulmm.material;
+package com.saulmm.material.activities;
 
 import android.animation.Animator;
 import android.app.Activity;
@@ -8,7 +8,10 @@ import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.widget.LinearLayout;
 
-public class SecondActivity extends Activity {
+import com.saulmm.material.R;
+import com.saulmm.material.Utils;
+
+public class TransitionSecondActivity extends Activity {
 
     private static final int NUM_VIEWS = 5;
     private static final int SCALE_DELAY = 30;
@@ -18,7 +21,7 @@ public class SecondActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_transition_second);
 
         rowContainer = (LinearLayout) findViewById(R.id.row_container2);
 

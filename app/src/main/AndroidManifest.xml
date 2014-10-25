@@ -9,12 +9,12 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name=".FirstActivity"
+            android:name=".activities.TransitionFirstActivity"
             android:label="" >
         </activity>
 
         <activity
-            android:name=".SecondActivity"
+            android:name=".activities.TransitionSecondActivity"
             android:label="@string/title_activity_my_activity2" >
         </activity>
 
@@ -23,7 +23,7 @@
             android:label="@string/title_activity_nav_drawer" >
         </activity>
 
-        <activity android:name=".slidingtabs.MainActivity">
+        <activity android:name=".activities.SlidingActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

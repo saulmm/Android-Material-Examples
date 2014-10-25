@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.saulmm.material.slidingtabs;
+package com.saulmm.material.slidingtabs.fragments;
 
 
 import android.app.Fragment;
@@ -25,8 +25,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.saulmm.material.R;
 import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
@@ -54,7 +52,7 @@ public class SlidingTabsBasicFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_sample, container, false);
+        return inflater.inflate(R.layout.fragment_sliding, container, false);
     }
 
     // BEGIN_INCLUDE (fragment_onviewcreated)
@@ -131,7 +129,7 @@ public class SlidingTabsBasicFragment extends Fragment {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             // Inflate a new layout from our resources
-            View view = getActivity().getLayoutInflater().inflate(R.layout.pager_item,
+            View view = getActivity().getLayoutInflater().inflate(R.layout.item_sliding_pager,
                     container, false);
             // Add the newly created View to the ViewPager
 
