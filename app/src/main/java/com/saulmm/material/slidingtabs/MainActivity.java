@@ -16,26 +16,26 @@
 
 package com.saulmm.material.slidingtabs;
 
-import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.MenuItem;
+import android.view.View;
+
+import com.saulmm.material.NavigationFragment;
 import com.saulmm.material.R;
 
-/**
- * A simple launcher activity containing a summary sample description, sample log and a custom
- * {@link android.support.v4.app.Fragment} which can display a view.
- * <p>
- * For devices with displays with a width of 720dp or greater, the sample log is always visible,
- * on other devices it's visibility is controlled by an item on the Action Bar.
- */
 public class MainActivity extends ActionBarActivity {
 
     public static final String TAG = "MainActivity";
 
-    // Whether the Log Fragment is currently shown
-    private boolean mLogShown;
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +49,69 @@ public class MainActivity extends ActionBarActivity {
             transaction.commit();
         }
 
-        // Configure toolbar
+        configureToolbar();
+        configureDrawer();
+    }
+
+    private void configureToolbar() {
         Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mainToolbar);
         getSupportActionBar().setTitle("Sliding");
 
+        mainToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
+                    mDrawerLayout.closeDrawer(Gravity.START);
+
+                } else {
+                    mDrawerLayout.openDrawer(Gravity.START);
+                }
+            }
+        });
+    }
+
+    private void configureDrawer() {
+        // Configure drawer
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+                R.string.drawer_open,
+                R.string.drawer_closed) {
+
+            public void onDrawerClosed(View view) {
+                supportInvalidateOptionsMenu();
+            }
+
+            public void onDrawerOpened(View drawerView) {
+                supportInvalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        // Sync the toggle state after onRestoreInstanceState has occurred.
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
     }
 }

@@ -2,6 +2,7 @@
 <resources>
 
     <!-- Theme colors -->
+    <color name="theme_light">#F48FB1</color>
     <color name="theme_default_primary">#EC407A</color>
     <color name="theme_default_primary_dark">#E91E63</color>
     <color name="theme_window_background">#2A2A2A</color>

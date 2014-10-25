@@ -12,5 +12,7 @@
     <string name="title_section3">Section 3</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_closed">Drawer Closed</string>
 
 </resources>
