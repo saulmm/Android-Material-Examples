@@ -8,4 +8,23 @@
     <color name="theme_window_background">#2A2A2A</color>
     <color name="accent">#EEFF41</color>
     <color name="gray_row_color">#ff515252</color>
+
+    <color name="color_set_1_primary">#E91E63</color>
+    <color name="color_set_1_primary_dark">#C2185B</color>
+    <color name="color_set_1_accent">#00AEF9</color>
+
+    <color name="color_set_2_primary">#00bcd4</color>
+    <color name="color_set_2_primary_dark">#00acc1</color>
+    <color name="color_set_2_accent">#673AB7</color>
+
+    <color name="color_set_3_primary">#259b24</color>
+    <color name="color_set_3_primary_dark">#0a8f08</color>
+    <color name="color_set_3_accent">#E91E63</color>
+
+    <color name="color_set_4_primary">#ff9800</color>
+    <color name="color_set_4_primary_dark">#fb8c00</color>
+    <color name="color_set_4_accent">#FF5722</color>
+
+
+
 </resources>

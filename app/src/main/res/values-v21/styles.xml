@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- android theme colors -->
         <item name="android:colorPrimary">@color/theme_default_primary</item>
         <item name="android:colorPrimaryDark">@color/theme_default_primary_dark</item>
         <item name="android:statusBarColor">@color/theme_default_primary_dark</item>
+        <item name="android:colorControlActivated">@color/accent</item>
         <item name="android:colorAccent">@color/accent</item>
 
         <!-- android transitions -->
         <item name="android:windowContentTransitions">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
+
+
+    <style name="theme1" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_1_primary</item>
+        <item name="android:colorPrimaryDark">@color/color_set_1_primary_dark</item>
+        <item name="android:statusBarColor">@color/color_set_1_primary_dark</item>
+        <item name="android:navigationBarColor">@color/color_set_1_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_1_accent</item>
+        <item name="android:colorAccent">@color/color_set_1_accent</item>
+    </style>
+
+    <style name="theme2" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_2_primary</item>
+        <item name="android:colorPrimaryDark">@color/color_set_2_primary_dark</item>
+        <item name="android:statusBarColor">@color/color_set_2_primary_dark</item>
+        <item name="android:navigationBarColor">@color/color_set_2_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_2_accent</item>
+        <item name="android:colorAccent">@color/color_set_2_accent</item>
+    </style>
+
+    <style name="theme3" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_3_primary</item>
+        <item name="android:colorPrimaryDark">@color/color_set_3_primary_dark</item>
+        <item name="android:statusBarColor">@color/color_set_3_primary_dark</item>
+        <item name="android:navigationBarColor">@color/color_set_3_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_3_accent</item>
+        <item name="android:colorAccent">@color/color_set_3_accent</item>
+    </style>
+
+    <style name="theme4" parent="AppTheme">
+        <item name="android:colorPrimary">@color/color_set_4_primary</item>
+        <item name="android:colorPrimaryDark">@color/color_set_4_primary_dark</item>
+        <item name="android:statusBarColor">@color/color_set_4_primary_dark</item>
+        <item name="android:navigationBarColor">@color/color_set_4_primary</item>
+        <item name="android:colorControlActivated">@color/color_set_4_accent</item>
+        <item name="android:colorAccent">@color/color_set_4_accent</item>
+    </style>
+
 
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
@@ -23,6 +63,10 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textColor">#FFF</item>
     </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        </style>
+
 
 
 </resources>

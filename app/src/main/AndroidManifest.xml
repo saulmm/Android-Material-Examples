@@ -7,31 +7,32 @@
         android:icon="@drawable/ic_launcher"
         android:label=""
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".activities.TransitionFirstActivity"
             android:label="" >
         </activity>
-
         <activity
             android:name=".activities.TransitionSecondActivity"
             android:label="@string/title_activity_my_activity2" >
         </activity>
-
         <activity
             android:name=".NavDrawerActivity"
             android:label="@string/title_activity_nav_drawer" >
         </activity>
+        <activity android:name=".activities.SlidingActivity" >
 
-        <activity android:name=".activities.SlidingActivity">
+        </activity>
+        <activity
+            android:name=".activities.ColorActivity"
+            android:label="@string/title_activity_color" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
-
     </application>
 
 </manifest>
