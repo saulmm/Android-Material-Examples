@@ -21,3 +21,9 @@ Commit - **ead8ada**
 Commit - **f502305**
 
 ![](https://lh5.googleusercontent.com/-N-0aREntDdM/VEvP4I5kxrI/AAAAAAAAvQA/3CRH8pH5Vq4/s1006-no/sliding.gif)
+
+## Using CircularReveal to show a pretty effect between activities
+
+Commit - **ba9c202**
+
+![](https://lh3.googleusercontent.com/-eQoRYLME7-0/VFEZ9qNaR7I/AAAAAAAAvqg/xk6U4UT_FUY/w420-h747-no/reveal.gif)
