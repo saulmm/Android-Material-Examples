@@ -46,7 +46,8 @@
             tools:text="Amazing text"/>
         
         </RelativeLayout>
-        
+
+
        
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,12 +73,44 @@
 
             <Switch
                 android:id="@+id/theme_switch"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:text="Awesome"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="More controls"
+            android:textColor="?android:colorAccent"
+            android:gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/theme_check"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="7"
                 android:layout_height="wrap_content"
                 android:text="Awesome"
                 android:layout_marginLeft="16dp"
@@ -131,7 +164,6 @@
                 android:clickable="true"
                 android:onClick="view"
                 android:background="@drawable/color4"/>
-
 
         </LinearLayout>
     </LinearLayout>

@@ -16,6 +16,7 @@ import android.util.Pair;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewAnimationUtils;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -26,8 +27,6 @@ public class ColorActivity extends Activity {
 
     private SharedPreferences sharedpreferences;
     private View revealView;
-    private View circleHolder;
-    private View fabButton;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -36,37 +35,32 @@ public class ColorActivity extends Activity {
 
         // Set the saved theme
         sharedpreferences = getSharedPreferences("test", Context.MODE_PRIVATE);
-//        sharedpreferences.edit().clear().apply();
         setTheme(sharedpreferences.getInt("theme", R.style.AppTheme));
 
         setContentView(R.layout.activity_color);
 
         // Views
         Switch themeSwitch = (Switch) findViewById(R.id.theme_switch);
-        themeSwitch.setChecked(sharedpreferences.getBoolean("switch", false));
+        themeSwitch.setChecked(sharedpreferences.getBoolean(themeSwitch.getId()+"", false));
+        themeSwitch.setOnCheckedChangeListener(checkedListener);
+
+        CheckBox themeCheck = (CheckBox) findViewById(R.id.theme_check);
+        themeCheck.setChecked(sharedpreferences.getBoolean(themeCheck.getId()+"", false));
+        themeCheck.setOnCheckedChangeListener(checkedListener);
+
         revealView = findViewById(R.id.reveal_view);
-        fabButton = findViewById(R.id.fab_button);
-        circleHolder = findViewById(R.id.circle_holder);
 
-        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-            // Save the state of the switch
-            SharedPreferences.Editor ed = sharedpreferences.edit();
-            ed.putInt("theme", (isChecked) ? R.style.Base_Theme_AppCompat : R.style.Base_Theme_AppCompat_Light);
-            ed.putBoolean("switch", isChecked);
-            ed.apply();
-            }
-        });
-
-        // Show the unreveal effect
+        // Show the unReveal effect
         final int cx = sharedpreferences.getInt("x", 0);
         final int cy = sharedpreferences.getInt("y", 0);
 
-        if (cx != 0 && cy != 0) {
+        startHideRevealEffect(cx, cy);
+    }
 
-            // Show the unreveal effect when the view is attached to the window
+    private void startHideRevealEffect(final int cx, final int cy) {
+
+        if (cx != 0 && cy != 0) {
+            // Show the unReveal effect when the view is attached to the window
             revealView.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
                 @Override
                 public void onViewAttachedToWindow(View v) {
@@ -76,80 +70,29 @@ public class ColorActivity extends Activity {
                     getTheme().resolveAttribute(android.R.attr.colorPrimary, outValue, true);
                     revealView.setBackgroundColor(outValue.data);
 
-                    hideRevealEffect(cx, cy);
+                    Utils.hideRevealEffect(revealView, cx, cy, 1920);
                 }
 
                 @Override
                 public void onViewDetachedFromWindow(View v) {}
             });
         }
-
     }
 
-    public void showRevealEffect(View v, int primaryColor) {
-        revealView.setVisibility(View.VISIBLE);
-
-        int [] location = new int[2];
-        revealView.setBackgroundColor(primaryColor);
-        v.getLocationOnScreen(location);
-
-        int cx = (location[0] + (v.getWidth() / 2));
-        int cy = location[1] + (Utils.getStatusBarHeight(this) / 2);
-
-
-        SharedPreferences.Editor ed = sharedpreferences.edit();
-        ed.putInt("x", cx);
-        ed.putInt("y", cy);
-        ed.apply();
-
-        int height = revealView.getHeight();
-
-        Animator anim = ViewAnimationUtils.createCircularReveal(
-                revealView, cx, cy, 0, height);
-
-
-        anim.addListener(revealAnimationListener);
-                anim.start();
-
-        hideNavigationStatus();
-    }
-
-
-    public void hideRevealEffect (int x, int y) {
-
-        revealView.setVisibility(View.VISIBLE);
-        int initialRadius = 1920;
-
-        // create the animation (the final radius is zero)
-        Animator anim = ViewAnimationUtils.createCircularReveal(
-                revealView, x, y, 1080, 0);
-
-        Log.d("WTF", "X: "+x+" Y: "+y+" - "+initialRadius);
-
-        // make the view invisible when the animation is done
-        anim.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-            super.onAnimationEnd(animation);
-            revealView.setVisibility(View.INVISIBLE);
-            }
-        });
-
-        anim.start();
-    }
 
     private void hideNavigationStatus() {
+
         View decorView = getWindow().getDecorView();
 
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    Animator.AnimatorListener revealAnimationListener = new Animator.AnimatorListener() {
-        @Override
-        public void onAnimationStart(Animator animation) {
 
-        }
+    Animator.AnimatorListener revealAnimationListener = new Animator.AnimatorListener() {
+
+        @Override
+        public void onAnimationStart(Animator animation) {}
 
         @Override
         public void onAnimationEnd(Animator animation) {
@@ -159,28 +102,22 @@ public class ColorActivity extends Activity {
             startActivity(i);
             overridePendingTransition(0, 0);
             finish();
-
         }
 
         @Override
-        public void onAnimationCancel(Animator animation) {
-
-        }
+        public void onAnimationCancel(Animator animation) {}
 
         @Override
-        public void onAnimationRepeat(Animator animation) {
-
-
-        }
+        public void onAnimationRepeat(Animator animation) {}
     };
 
 
     public void view(View view) {
+
         int selectedTheme = 0;
         int primaryColor = 0;
 
         switch (view.getId()) {
-
             case R.id.circle1:
                 selectedTheme = R.style.theme1;
                 primaryColor = getResources().getColor(R.color.color_set_1_primary);
@@ -202,13 +139,32 @@ public class ColorActivity extends Activity {
                 break;
         }
 
+        int [] location = new int[2];
+        revealView.setBackgroundColor(primaryColor);
+        view.getLocationOnScreen(location);
 
-        showRevealEffect(view, primaryColor);
+        int cx = (location[0] + (view.getWidth() / 2));
+        int cy = location[1] + (Utils.getStatusBarHeight(this) / 2);
 
         SharedPreferences.Editor ed = sharedpreferences.edit();
+        ed.putInt("x", cx);
+        ed.putInt("y", cy);
         ed.putInt("theme", selectedTheme);
         ed.apply();
-//
-//
+
+        hideNavigationStatus();
+        Utils.showRevealEFfect(revealView, cx, cy, revealAnimationListener);
     }
+
+
+    CompoundButton.OnCheckedChangeListener checkedListener = new CompoundButton.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            SharedPreferences.Editor ed = sharedpreferences.edit();
+            ed.putInt("theme", (isChecked) ? R.style.Base_Theme_AppCompat : R.style.Base_Theme_AppCompat_Light);
+            ed.putBoolean(buttonView.getId()+"", isChecked);
+            ed.apply();
+        }
+    };
 }
