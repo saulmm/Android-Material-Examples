@@ -134,11 +134,21 @@
 
 
         </LinearLayout>
-        
-
-
-
-
     </LinearLayout>
+
+    <Button
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fab_button"
+        android:transitionName="fab"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/ripple_round"
+        android:stateListAnimator="@anim/fab_anim"
+        android:elevation="4dp"
+        android:layout_below="@+id/holder_view"
+        android:layout_marginTop="-26dp"
+        android:layout_alignParentEnd="true"
+        />
 
 </RelativeLayout>

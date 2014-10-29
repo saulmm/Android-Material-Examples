@@ -10,6 +10,9 @@
         <activity
             android:name=".activities.TransitionFirstActivity"
             android:label="" >
+
+
+
         </activity>
         <activity
             android:name=".activities.TransitionSecondActivity"
@@ -28,7 +31,6 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 

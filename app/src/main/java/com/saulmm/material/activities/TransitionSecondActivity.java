@@ -25,7 +25,7 @@ public class TransitionSecondActivity extends Activity {
 
         rowContainer = (LinearLayout) findViewById(R.id.row_container2);
 
-        Utils.configureWindowEnterExitTransition(getWindow());
+        Utils.configureWindowEnterExitExplodeTransition(getWindow());
 
         getWindow().getEnterTransition().addListener(new Transition.TransitionListener() {
             @Override

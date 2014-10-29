@@ -7,12 +7,16 @@
         <!-- android theme colors -->
         <item name="android:colorPrimary">@color/theme_default_primary</item>
         <item name="android:colorPrimaryDark">@color/theme_default_primary_dark</item>
-        <item name="android:statusBarColor">@color/theme_default_primary_dark</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:colorControlActivated">@color/accent</item>
         <item name="android:colorAccent">@color/accent</item>
 
         <!-- android transitions -->
         <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
 
@@ -20,8 +24,6 @@
     <style name="theme1" parent="AppTheme">
         <item name="android:colorPrimary">@color/color_set_1_primary</item>
         <item name="android:colorPrimaryDark">@color/color_set_1_primary_dark</item>
-        <item name="android:statusBarColor">@color/color_set_1_primary_dark</item>
-        <item name="android:navigationBarColor">@color/color_set_1_primary</item>
         <item name="android:colorControlActivated">@color/color_set_1_accent</item>
         <item name="android:colorAccent">@color/color_set_1_accent</item>
     </style>
@@ -29,8 +31,6 @@
     <style name="theme2" parent="AppTheme">
         <item name="android:colorPrimary">@color/color_set_2_primary</item>
         <item name="android:colorPrimaryDark">@color/color_set_2_primary_dark</item>
-        <item name="android:statusBarColor">@color/color_set_2_primary_dark</item>
-        <item name="android:navigationBarColor">@color/color_set_2_primary</item>
         <item name="android:colorControlActivated">@color/color_set_2_accent</item>
         <item name="android:colorAccent">@color/color_set_2_accent</item>
     </style>
@@ -38,8 +38,6 @@
     <style name="theme3" parent="AppTheme">
         <item name="android:colorPrimary">@color/color_set_3_primary</item>
         <item name="android:colorPrimaryDark">@color/color_set_3_primary_dark</item>
-        <item name="android:statusBarColor">@color/color_set_3_primary_dark</item>
-        <item name="android:navigationBarColor">@color/color_set_3_primary</item>
         <item name="android:colorControlActivated">@color/color_set_3_accent</item>
         <item name="android:colorAccent">@color/color_set_3_accent</item>
     </style>
@@ -47,8 +45,6 @@
     <style name="theme4" parent="AppTheme">
         <item name="android:colorPrimary">@color/color_set_4_primary</item>
         <item name="android:colorPrimaryDark">@color/color_set_4_primary_dark</item>
-        <item name="android:statusBarColor">@color/color_set_4_primary_dark</item>
-        <item name="android:navigationBarColor">@color/color_set_4_primary</item>
         <item name="android:colorControlActivated">@color/color_set_4_accent</item>
         <item name="android:colorAccent">@color/color_set_4_accent</item>
     </style>
