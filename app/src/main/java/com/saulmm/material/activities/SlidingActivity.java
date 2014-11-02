@@ -28,7 +28,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.saulmm.material.R;
-import com.saulmm.material.slidingtabs.fragments.SlidingTabsBasicFragment;
+import com.saulmm.material.slidingtabs.fragments.SlidingTabsBasic;
 
 public class SlidingActivity extends ActionBarActivity {
 
@@ -42,7 +42,7 @@ public class SlidingActivity extends ActionBarActivity {
 
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            SlidingTabsBasicFragment fragment = new SlidingTabsBasicFragment();
+            SlidingTabsBasic fragment = new SlidingTabsBasic();
             transaction.replace(R.id.sample_content_fragment, fragment);
             transaction.commit();
         }
