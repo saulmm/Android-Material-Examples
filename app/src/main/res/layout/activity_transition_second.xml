@@ -7,7 +7,7 @@
     >
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/dialer_toolbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:background="?android:colorPrimary"
@@ -17,7 +17,7 @@
         android:id="@+id/row_container2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/dialer_toolbar"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:paddingLeft="@dimen/activity_horizontal_margin"

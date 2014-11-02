@@ -28,7 +28,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.saulmm.material.R;
-import com.saulmm.material.slidingtabs.fragments.SlidingTabsBasic;
+import com.saulmm.material.slidingtabs.fragments.SlidingTabFragment;
 
 public class SlidingActivity extends ActionBarActivity {
 
@@ -42,7 +42,7 @@ public class SlidingActivity extends ActionBarActivity {
 
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            SlidingTabsBasic fragment = new SlidingTabsBasic();
+            SlidingTabFragment fragment = new SlidingTabFragment();
             transaction.replace(R.id.sample_content_fragment, fragment);
             transaction.commit();
         }
@@ -52,7 +52,7 @@ public class SlidingActivity extends ActionBarActivity {
     }
 
     private void configureToolbar() {
-        Toolbar mainToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mainToolbar = (Toolbar) findViewById(R.id.dialer_toolbar);
         setSupportActionBar(mainToolbar);
         getSupportActionBar().setTitle("Sliding");
 

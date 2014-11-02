@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sample_main_layout">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_dialer_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?android:colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:orientation="vertical">
+
+        <com.saulmm.material.slidingtabs.views.SlidingTabLayout
+            android:id="@+id/activity_dialer_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/theme_default_primary"
+            android:elevation="10dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_dialer_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

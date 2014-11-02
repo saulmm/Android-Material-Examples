@@ -31,7 +31,7 @@ import com.saulmm.material.slidingtabs.adapter.SamplePagerAdapter;
 import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
 
 
-public class SlidingTabsBasic extends Fragment {
+public class SlidingTabFragment extends Fragment {
 
     static final String LOG_TAG = "SlidingTabsBasicFragment";
 
@@ -43,6 +43,7 @@ public class SlidingTabsBasic extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+
         ViewPager mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
         mViewPager.setAdapter(new SamplePagerAdapter(getActivity()));
 
