@@ -27,6 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.saulmm.material.R;
+import com.saulmm.material.slidingtabs.adapter.SamplePagerAdapter;
 import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
 
 
@@ -43,49 +44,9 @@ public class SlidingTabsBasic extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         ViewPager mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        mViewPager.setAdapter(new SamplePagerAdapter());
+        mViewPager.setAdapter(new SamplePagerAdapter(getActivity()));
 
         SlidingTabLayout mSlidingTabLayout = (SlidingTabLayout) view.findViewById(R.id.sliding_tabs);
         mSlidingTabLayout.setViewPager(mViewPager);
-
-    }
-
-    class SamplePagerAdapter extends PagerAdapter {
-        final String [] TITLES = {"CATEGORIES", "HOME", "TOP SELLING", "TOP GAMES", "TOP GROSSING"};
-
-        @Override
-        public int getCount() {
-            return 5;
-        }
-
-
-        @Override
-        public boolean isViewFromObject(View view, Object o) {
-            return o == view;
-        }
-
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return TITLES[position];
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-
-            View view = getActivity().getLayoutInflater().inflate(R.layout.item_sliding_pager,
-                    container, false);
-
-            container.addView(view);
-
-            return view;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView((View) object);
-            Log.i(LOG_TAG, "destroyItem() [position: " + position + "]");
-        }
-
     }
 }
