@@ -13,7 +13,7 @@
         android:visibility="invisible"/>
 
     <View
-        android:id="@+id/toolbar"
+        android:id="@+id/dialer_toolbar"
         android:layout_width="match_parent"
         android:background="?android:colorPrimary"
         android:layout_height="?attr/actionBarSize"/>
@@ -26,7 +26,7 @@
             android:paddingLeft="72dp"
             android:paddingRight="16dp"
             android:transitionName="holder1"
-            android:layout_below="@id/toolbar"
+            android:layout_below="@id/dialer_toolbar"
             android:background="?android:colorPrimary">
 
         <TextView

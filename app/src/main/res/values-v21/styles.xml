@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- android theme colors -->
-        <item name="android:colorPrimary">@color/theme_default_primary</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:colorControlActivated">@color/accent</item>
-        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:colorPrimary">@color/theme_dialer_primary</item>
+        <item name="android:colorPrimaryDark">@color/theme_dialer_high</item>
+        <item name="android:colorAccent">@color/theme_dialer_accent</item>
 
         <!-- android transitions -->
         <item name="android:windowContentTransitions">true</item>
@@ -52,8 +48,4 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textColor">#FFF</item>
     </style>
-
-    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
-        </style>
-
 </resources>

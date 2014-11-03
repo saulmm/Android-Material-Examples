@@ -8,6 +8,12 @@
     <color name="accent">#EEFF41</color>
     <color name="gray_row_color">#ff515252</color>
 
+
+    <!-- Dialer theme -->
+    <color name="theme_dialer_high">#0277BD</color>
+    <color name="theme_dialer_primary">#0288D1</color>
+    <color name="theme_dialer_accent">#FFF</color>
+
     <color name="color_set_1_primary">#4fc3f7</color>
     <color name="color_set_1_accent">#009688</color>
 

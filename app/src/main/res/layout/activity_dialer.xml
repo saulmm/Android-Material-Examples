@@ -9,6 +9,7 @@
         android:id="@+id/activity_dialer_toolbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+
         android:background="?android:colorPrimary"
         android:minHeight="?attr/actionBarSize"/>
 
@@ -27,7 +28,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/theme_default_primary"
+            android:background="?android:colorPrimary"
             android:elevation="10dp"/>
 
         <android.support.v4.view.ViewPager

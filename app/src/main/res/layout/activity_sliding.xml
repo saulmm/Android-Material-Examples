@@ -35,7 +35,5 @@
             android:name="com.saulmm.material.fragments.NavigationFragment"/>
 
     </android.support.v4.widget.DrawerLayout>
-
-
 </LinearLayout>
 

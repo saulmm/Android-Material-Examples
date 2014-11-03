@@ -23,12 +23,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 
 import com.saulmm.material.R;
+import com.saulmm.material.slidingtabs.adapter.DialerAdapter;
 import com.saulmm.material.slidingtabs.adapter.SamplePagerAdapter;
 import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
 
 public class DialerSampleActivity extends ActionBarActivity {
-
-    private ActionBarDrawerToggle mDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +42,7 @@ public class DialerSampleActivity extends ActionBarActivity {
     private void configureToolbar() {
 
         Toolbar mainToolbar = (Toolbar) findViewById(R.id.activity_dialer_toolbar);
+        mainToolbar.setTitleTextColor(getResources().getColor(R.color.theme_dialer_accent));
         setSupportActionBar(mainToolbar);
         getSupportActionBar().setTitle("Sliding");
     }
@@ -50,7 +50,7 @@ public class DialerSampleActivity extends ActionBarActivity {
     private void configurePager() {
 
         ViewPager mViewPager = (ViewPager) findViewById(R.id.activity_dialer_pager);
-        mViewPager.setAdapter(new SamplePagerAdapter(this));
+        mViewPager.setAdapter(new DialerAdapter(this));
 
         SlidingTabLayout mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.activity_dialer_tabs);
         mSlidingTabLayout.setViewPager(mViewPager);
