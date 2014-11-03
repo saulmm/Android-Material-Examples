@@ -1,27 +1,19 @@
 package com.saulmm.material.activities;
 
 import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.transition.Slide;
-import android.transition.Transition;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.util.Pair;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import com.saulmm.material.R;
-import com.saulmm.material.Utils;
+import com.saulmm.material.utils.Utils;
 
 public class ColorActivity extends Activity {
 

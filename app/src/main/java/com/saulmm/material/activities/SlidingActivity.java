@@ -28,7 +28,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.saulmm.material.R;
-import com.saulmm.material.slidingtabs.fragments.SlidingTabFragment;
+import com.saulmm.material.fragments.SlidingTabFragment;
 
 public class SlidingActivity extends ActionBarActivity {
 

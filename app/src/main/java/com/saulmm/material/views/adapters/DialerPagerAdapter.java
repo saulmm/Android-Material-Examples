@@ -1,4 +1,4 @@
-package com.saulmm.material.slidingtabs.adapter;
+package com.saulmm.material.views.adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -9,19 +9,18 @@ import android.view.ViewGroup;
 import com.saulmm.material.R;
 
 @SuppressWarnings("FieldCanBeLocal")
-public class SamplePagerAdapter extends PagerAdapter {
+public class DialerPagerAdapter extends PagerAdapter {
 
-    private final String [] TITLES = {"CATEGORIES", "HOME", "TOP SELLING", "TOP GAMES", "TOP GROSSING"};
-    private final int FRAGMENT_COUNT = 5;
+    private final String [] TITLES = {"SPEED DIAL", "RECENTS", "CONTACTS"};
     private Context context;
 
-    public SamplePagerAdapter(Context context) {
+    public DialerPagerAdapter(Context context) {
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return FRAGMENT_COUNT;
+        return TITLES.length;
     }
 
 

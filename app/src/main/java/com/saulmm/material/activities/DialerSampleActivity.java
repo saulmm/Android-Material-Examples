@@ -19,13 +19,11 @@ package com.saulmm.material.activities;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 
 import com.saulmm.material.R;
-import com.saulmm.material.slidingtabs.adapter.DialerAdapter;
-import com.saulmm.material.slidingtabs.adapter.SamplePagerAdapter;
-import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
+import com.saulmm.material.views.adapters.DialerPagerAdapter;
+import com.saulmm.material.views.widgets.SlidingTabLayout;
 
 public class DialerSampleActivity extends ActionBarActivity {
 
@@ -50,7 +48,7 @@ public class DialerSampleActivity extends ActionBarActivity {
     private void configurePager() {
 
         ViewPager mViewPager = (ViewPager) findViewById(R.id.activity_dialer_pager);
-        mViewPager.setAdapter(new DialerAdapter(this));
+        mViewPager.setAdapter(new DialerPagerAdapter(this));
 
         SlidingTabLayout mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.activity_dialer_tabs);
         mSlidingTabLayout.setViewPager(mViewPager);

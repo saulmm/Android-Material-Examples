@@ -1,4 +1,4 @@
-package com.saulmm.material;
+package com.saulmm.material.utils;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.view.animation.PathInterpolator;
+
+import com.saulmm.material.R;
 
 public class Utils {
 

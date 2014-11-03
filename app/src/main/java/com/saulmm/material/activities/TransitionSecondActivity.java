@@ -9,7 +9,7 @@ import android.view.ViewPropertyAnimator;
 import android.widget.LinearLayout;
 
 import com.saulmm.material.R;
-import com.saulmm.material.Utils;
+import com.saulmm.material.utils.Utils;
 
 public class TransitionSecondActivity extends Activity {
 

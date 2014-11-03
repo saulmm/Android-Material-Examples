@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.saulmm.material.slidingtabs.views;
+package com.saulmm.material.views.widgets;
 
 import android.R;
 import android.content.Context;

@@ -14,21 +14,19 @@
  * limitations under the License.
  */
 
-package com.saulmm.material.slidingtabs.fragments;
+package com.saulmm.material.fragments;
 
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.saulmm.material.R;
-import com.saulmm.material.slidingtabs.adapter.SamplePagerAdapter;
-import com.saulmm.material.slidingtabs.views.SlidingTabLayout;
+import com.saulmm.material.views.adapters.SamplePagerAdapter;
+import com.saulmm.material.views.widgets.SlidingTabLayout;
 
 
 public class SlidingTabFragment extends Fragment {

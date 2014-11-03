@@ -8,7 +8,7 @@ import android.util.Pair;
 import android.view.View;
 
 import com.saulmm.material.R;
-import com.saulmm.material.Utils;
+import com.saulmm.material.utils.Utils;
 
 public class TransitionFirstActivity extends Activity {
 
