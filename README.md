@@ -27,3 +27,10 @@ Commit - **f502305**
 Commit - **ba9c202**
 
 ![](https://lh3.googleusercontent.com/-eQoRYLME7-0/VFEZ9qNaR7I/AAAAAAAAvqg/xk6U4UT_FUY/w420-h747-no/reveal.gif)
+
+## Replicating some parts of the lollypop dialer app basing on the material design principle: Motion provides meaning
+
+Commit - **eb20707**
+
+![](https://lh6.googleusercontent.com/-t40vK2mcvkI/VF4-e7AzhBI/AAAAAAAAwnQ/lyzfRIj9heo/w800-h1422-no/dialer.gif)
+
