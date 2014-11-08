@@ -1,35 +1,36 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:id="@+id/sample_main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/sample_main_layout">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/activity_dialer_toolbar"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-
-        android:background="?android:colorPrimary"
-        android:minHeight="?attr/actionBarSize"/>
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFF"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_dialer_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="?android:colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            />
 
         <com.saulmm.material.views.widgets.SlidingTabLayout
             android:id="@+id/activity_dialer_tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="10dp"/>
+            />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="?android:colorPrimary"
-            android:elevation="10dp"/>
+            android:elevation="10dp"
+            />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/activity_dialer_pager"
@@ -37,9 +38,38 @@
             android:layout_height="0px"
             android:layout_weight="1"
             android:layout_marginBottom="10dp"
-            android:background="@android:color/white"/>
+            android:background="#ffe2e2e2"
+            />
 
     </LinearLayout>
 
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/activity_dialer_frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:elevation="7dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:background="#FFF"
+        >
+
+        <GridView
+            android:id="@+id/activity_dialer_pad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:columnWidth="100dp"
+            android:stretchMode="columnWidth"
+            android:numColumns="auto_fit"
+            />
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/view_fab_button"
+        layout="@layout/view_fab_button"
+        />
+
+</RelativeLayout>
 

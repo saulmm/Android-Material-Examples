@@ -3,19 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <com.saulmm.material.views.widgets.SlidingTabLayout
         android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="10dp"/>
+        android:elevation="10dp"
+        />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/theme_default_primary"
-        android:elevation="10dp"/>
+        android:elevation="10dp"
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
@@ -23,6 +26,7 @@
         android:layout_height="0px"
         android:layout_weight="1"
         android:layout_marginBottom="10dp"
-        android:background="@android:color/white"/>
+        android:background="@android:color/white"
+        />
 
 </LinearLayout>

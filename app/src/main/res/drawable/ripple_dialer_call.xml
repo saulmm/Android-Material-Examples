@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="?android:colorPrimary"
+    android:color="?android:colorControlHighlight"
     >
 
     <item>
         <shape android:shape="oval">
-            <solid android:color="?android:colorPrimary"/>
+            <solid android:color="@color/dialer_call"/>
         </shape>
     </item>
 </ripple>

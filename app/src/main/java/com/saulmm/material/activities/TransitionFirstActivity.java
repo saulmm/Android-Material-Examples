@@ -8,7 +8,7 @@ import android.util.Pair;
 import android.view.View;
 
 import com.saulmm.material.R;
-import com.saulmm.material.utils.Utils;
+import com.saulmm.material.utils.GUIUtils;
 
 public class TransitionFirstActivity extends Activity {
 
@@ -21,12 +21,12 @@ public class TransitionFirstActivity extends Activity {
         setContentView(R.layout.activity_transition_first);
 
         // Set explode animation when enter and exit the activity
-        Utils.configureWindowEnterExitExplodeTransition(getWindow());
+        GUIUtils.configureWindowEnterExitExplodeTransition(getWindow());
 
         // Fab Button
         fabButton = findViewById(R.id.fab_button);
         fabButton.setOnClickListener(fabClickListener);
-        Utils.configureFab(fabButton);
+        GUIUtils.configureFab(fabButton);
     }
 
 

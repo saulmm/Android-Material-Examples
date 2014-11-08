@@ -9,7 +9,7 @@ import android.view.ViewPropertyAnimator;
 import android.widget.LinearLayout;
 
 import com.saulmm.material.R;
-import com.saulmm.material.utils.Utils;
+import com.saulmm.material.utils.GUIUtils;
 
 public class TransitionSecondActivity extends Activity {
 
@@ -25,7 +25,7 @@ public class TransitionSecondActivity extends Activity {
 
         rowContainer = (LinearLayout) findViewById(R.id.row_container2);
 
-        Utils.configureWindowEnterExitExplodeTransition(getWindow());
+        GUIUtils.configureWindowEnterExitExplodeTransition(getWindow());
 
         getWindow().getEnterTransition().addListener(new Transition.TransitionListener() {
             @Override

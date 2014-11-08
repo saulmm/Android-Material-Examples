@@ -1,31 +1,32 @@
-/*
-* Copyright 2013 The Android Open Source Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*     http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+
 
 package com.saulmm.material.activities;
 
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.GridView;
+import android.widget.ImageButton;
 
 import com.saulmm.material.R;
-import com.saulmm.material.views.adapters.DialerPagerAdapter;
+import com.saulmm.material.utils.GUIUtils;
+import com.saulmm.material.views.adapters.SamplePagerAdapter;
 import com.saulmm.material.views.widgets.SlidingTabLayout;
 
-public class DialerSampleActivity extends ActionBarActivity {
+public class DialerSampleActivity extends ActionBarActivity implements ViewPager.OnPageChangeListener {
+
+    private int screenWidth;
+    private ImageButton fabButton;
+    private FrameLayout dialerKeysContainer;
+    private float absolutefabPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,49 @@ public class DialerSampleActivity extends ActionBarActivity {
 
         configureToolbar();
         configurePager();
+        configureFab();
+        configureDialer();
+
+        dialerKeysContainer = (FrameLayout) findViewById(R.id.activity_dialer_frame_container);
+
+        // Get the screen with
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        screenWidth = size.x;
+    }
+
+    private void configureFab() {
+
+        fabButton = (ImageButton) findViewById(R.id.view_fab_button);
+        fabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            absolutefabPosition = v.getX();
+            GUIUtils.hideViewByScale(fabButton);
+            dialerKeysContainer.setVisibility(View.VISIBLE);
+
+             Animation showDialerContainerAnimation = AnimationUtils.loadAnimation(DialerSampleActivity.this, R.anim.translate_down_on);
+             showDialerContainerAnimation.setAnimationListener(new Animation.AnimationListener() {
+                 @Override
+                 public void onAnimationStart(Animation animation) {}
+
+                 @Override
+                 public void onAnimationEnd(Animation animation) {
+
+                     fabButton.setBackgroundResource(R.drawable.ripple_dialer_call);
+                     fabButton.setX(screenWidth / 2 - fabButton.getWidth() / 2);
+                     GUIUtils.showViewByScale(fabButton);
+                 }
+
+                 @Override
+                 public void onAnimationRepeat(Animation animation) {}
+             });
+
+            dialerKeysContainer.startAnimation(showDialerContainerAnimation);
+            }
+        });
     }
 
     private void configureToolbar() {
@@ -42,15 +86,79 @@ public class DialerSampleActivity extends ActionBarActivity {
         Toolbar mainToolbar = (Toolbar) findViewById(R.id.activity_dialer_toolbar);
         mainToolbar.setTitleTextColor(getResources().getColor(R.color.theme_dialer_accent));
         setSupportActionBar(mainToolbar);
-        getSupportActionBar().setTitle("Sliding");
+        getSupportActionBar().setTitle("Dialer");
     }
 
     private void configurePager() {
 
-        ViewPager mViewPager = (ViewPager) findViewById(R.id.activity_dialer_pager);
-        mViewPager.setAdapter(new DialerPagerAdapter(this));
+        ViewPager tabsViewPAger = (ViewPager) findViewById(R.id.activity_dialer_pager);
+        tabsViewPAger.setAdapter(new SamplePagerAdapter(this));
+        tabsViewPAger.setCurrentItem(1);
 
         SlidingTabLayout mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.activity_dialer_tabs);
-        mSlidingTabLayout.setViewPager(mViewPager);
+        mSlidingTabLayout.addPagerListener(this);
+        mSlidingTabLayout.setViewPager(tabsViewPAger);
     }
+
+    private void configureDialer() {
+
+        GridView dialerGrid = (GridView) findViewById(R.id.activity_dialer_pad);
+        dialerGrid.setAdapter(new ArrayAdapter<String>(this, R.layout.list_item_dialer,
+                getResources().getStringArray(R.array.dialer_numbers)));
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        float fabButtonPosition = (screenWidth / 2 - fabButton.getWidth()) * positionOffset;
+
+
+        if (fabButtonPosition != 0 && position != 1) {
+
+            absolutefabPosition = fabButtonPosition + (screenWidth/2 - fabButton.getWidth()/2);
+            fabButton.setX(absolutefabPosition);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (dialerKeysContainer.getVisibility() == View.VISIBLE) {
+
+            Animation hideAnimation = AnimationUtils.loadAnimation(this, R.anim.translate_down_off);
+            hideAnimation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                    GUIUtils.hideViewByScale(fabButton);
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+
+                    dialerKeysContainer.setVisibility(View.INVISIBLE);
+                    fabButton.setBackgroundResource(R.drawable.ripple_dialer_idle);
+                    GUIUtils.showViewByScale(fabButton);
+
+                    fabButton.setX(absolutefabPosition);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+
+            dialerKeysContainer.startAnimation(hideAnimation);
+
+
+
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public void onPageSelected(int position) {}
+
+    @Override
+    public void onPageScrollStateChanged(int state) {}
 }

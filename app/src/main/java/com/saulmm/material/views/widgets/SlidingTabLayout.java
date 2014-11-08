@@ -31,6 +31,8 @@ import android.widget.TextView;
 
 import com.saulmm.material.R;
 
+import java.util.ArrayList;
+
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to
  * the user's scroll progress.
@@ -79,6 +81,8 @@ public class SlidingTabLayout extends HorizontalScrollView {
     private ViewPager mViewPager;
     private ViewPager.OnPageChangeListener mViewPagerPageChangeListener;
 
+    private ArrayList<ViewPager.OnPageChangeListener> pagerListeners = new ArrayList<ViewPager.OnPageChangeListener>();
+
     private final SlidingTabStrip mTabStrip;
 
     public SlidingTabLayout(Context context) {
@@ -101,6 +105,12 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
         mTabStrip = new SlidingTabStrip(context);
         addView(mTabStrip, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+
+        pagerListeners.add(new InternalViewPagerListener());
+    }
+
+    public void addPagerListener (ViewPager.OnPageChangeListener listener) {
+        pagerListeners.add(listener);
     }
 
     /**
@@ -161,7 +171,29 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
         mViewPager = viewPager;
         if (viewPager != null) {
-            viewPager.setOnPageChangeListener(new InternalViewPagerListener());
+            viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(int i, float v, int i2) {
+
+                    for (ViewPager.OnPageChangeListener pagerListener : pagerListeners) {
+                        pagerListener.onPageScrolled(i, v, i2);
+                    }
+                }
+
+                @Override
+                public void onPageSelected(int i) {
+                    for (ViewPager.OnPageChangeListener pagerListener : pagerListeners) {
+                        pagerListener.onPageSelected(i);
+                    }
+                }
+
+                @Override
+                public void onPageScrollStateChanged(int i) {
+                    for (ViewPager.OnPageChangeListener pagerListener : pagerListeners) {
+                        pagerListener.onPageScrollStateChanged(i);
+                    }
+                }
+            });
             populateTabStrip();
         }
     }

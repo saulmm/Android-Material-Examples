@@ -5,15 +5,25 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_my_activity2">MyActivity2</string>
     <string name="action_example">Example action</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="drawer_open">Drawer Open</string>
-    <string name="drawer_closed">Drawer Closed</string>
     <string name="title_activity_color">ColorActivity</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_closed">Close</string>
+
+    <!-- Dialer activity -->
+    <string-array name="dialer_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>*</item>
+        <item>0</item>
+        <item>#</item>
+    </string-array>
 
 </resources>

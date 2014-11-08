@@ -10,12 +10,15 @@ import android.transition.Fade;
 import android.transition.Slide;
 import android.view.View;
 import android.view.ViewAnimationUtils;
+import android.view.ViewPropertyAnimator;
 import android.view.Window;
 import android.view.animation.PathInterpolator;
 
 import com.saulmm.material.R;
 
-public class Utils {
+public class GUIUtils {
+
+    public static final int SCALE_FACTOR = 30;
 
     public static void configureWindowEnterExitExplodeTransition(Window w) {
 
@@ -68,7 +71,7 @@ public class Utils {
         anim.start();
     }
 
-    public static void showRevealEFfect (final View v, int centerX, int centerY, Animator.AnimatorListener lis) {
+    public static void showRevealEffect(final View v, int centerX, int centerY, Animator.AnimatorListener lis) {
 
         v.setVisibility(View.VISIBLE);
 
@@ -81,6 +84,24 @@ public class Utils {
 
         anim.addListener(lis);
         anim.start();
+    }
+
+
+
+    public static void hideViewByScale(View view) {
+
+        ViewPropertyAnimator propertyAnimator = view.animate().setStartDelay(SCALE_FACTOR)
+                .scaleX(0).scaleY(0);
+
+        propertyAnimator.start();
+    }
+
+    public static void showViewByScale(View view) {
+
+        ViewPropertyAnimator propertyAnimator = view.animate().setStartDelay(SCALE_FACTOR)
+                .scaleX(1).scaleY(1);
+
+        propertyAnimator.start();
     }
 
 

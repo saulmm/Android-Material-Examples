@@ -13,7 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import com.saulmm.material.R;
-import com.saulmm.material.utils.Utils;
+import com.saulmm.material.utils.GUIUtils;
 
 public class ColorActivity extends Activity {
 
@@ -62,7 +62,7 @@ public class ColorActivity extends Activity {
                     getTheme().resolveAttribute(android.R.attr.colorPrimary, outValue, true);
                     revealView.setBackgroundColor(outValue.data);
 
-                    Utils.hideRevealEffect(revealView, cx, cy, 1920);
+                    GUIUtils.hideRevealEffect(revealView, cx, cy, 1920);
                 }
 
                 @Override
@@ -136,7 +136,7 @@ public class ColorActivity extends Activity {
         view.getLocationOnScreen(location);
 
         int cx = (location[0] + (view.getWidth() / 2));
-        int cy = location[1] + (Utils.getStatusBarHeight(this) / 2);
+        int cy = location[1] + (GUIUtils.getStatusBarHeight(this) / 2);
 
         SharedPreferences.Editor ed = sharedpreferences.edit();
         ed.putInt("x", cx);
@@ -145,7 +145,7 @@ public class ColorActivity extends Activity {
         ed.apply();
 
         hideNavigationStatus();
-        Utils.showRevealEFfect(revealView, cx, cy, revealAnimationListener);
+        GUIUtils.showRevealEffect(revealView, cx, cy, revealAnimationListener);
     }
 
 

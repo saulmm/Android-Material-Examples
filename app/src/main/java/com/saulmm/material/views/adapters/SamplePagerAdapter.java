@@ -11,8 +11,8 @@ import com.saulmm.material.R;
 @SuppressWarnings("FieldCanBeLocal")
 public class SamplePagerAdapter extends PagerAdapter {
 
-    private final String [] TITLES = {"CATEGORIES", "HOME", "TOP SELLING", "TOP GAMES", "TOP GROSSING"};
-    private final int FRAGMENT_COUNT = 5;
+    private final String [] TITLES = {"SPEED DIAL", "RECENTS", "CONTACTS"};
+    private final int FRAGMENT_COUNT = 3;
     private Context context;
 
     public SamplePagerAdapter(Context context) {
@@ -23,7 +23,6 @@ public class SamplePagerAdapter extends PagerAdapter {
     public int getCount() {
         return FRAGMENT_COUNT;
     }
-
 
     @Override
     public boolean isViewFromObject(View view, Object o) {
@@ -39,11 +38,11 @@ public class SamplePagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.item_sliding_pager,
-                container, false);
+        View view = LayoutInflater.from(context).inflate(
+            R.layout.fragment_dialer_sample_page,
+            container, false);
 
         container.addView(view);
-
         return view;
     }
 

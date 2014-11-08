@@ -10,14 +10,15 @@
         android:layout_height="match_parent"
         android:background="?android:colorAccent"
         android:elevation="5dp"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        />
 
     <View
         android:id="@+id/dialer_toolbar"
         android:layout_width="match_parent"
         android:background="?android:colorPrimary"
-        android:layout_height="?attr/actionBarSize"/>
-
+        android:layout_height="?attr/actionBarSize"
+        />
 
         <RelativeLayout
             android:id="@+id/holder_view"
@@ -27,28 +28,28 @@
             android:paddingRight="16dp"
             android:transitionName="holder1"
             android:layout_below="@id/dialer_toolbar"
-            android:background="?android:colorPrimary">
+            android:background="?android:colorPrimary"
+            >
 
         <TextView
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="?android:colorAccent"
-            android:text="Title"/>
+            android:text="Title"
+            />
 
-        
         <EditText
             android:layout_below="@id/title_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="34sp"
             android:fontFamily="sans-serif-medium"
-            tools:text="Amazing text"/>
+            tools:text="Amazing text"
+            />
         
         </RelativeLayout>
 
-
-       
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -99,14 +100,16 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
 
             <CheckBox
                 android:id="@+id/theme_check"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                />
 
             <TextView
                 android:layout_width="0dp"
@@ -134,7 +137,8 @@
                 android:layout_gravity="center_vertical"
                 android:onClick="view"
                 android:clickable="true"
-                android:background="@drawable/color1"/>
+                android:background="@drawable/color1"
+                />
 
             <View
                 android:id="@+id/circle2"
@@ -144,7 +148,8 @@
                 android:layout_gravity="center_vertical"
                 android:clickable="true"
                 android:onClick="view"
-                android:background="@drawable/color2"/>
+                android:background="@drawable/color2"
+                />
 
             <View
                 android:id="@+id/circle3"
@@ -154,7 +159,8 @@
                 android:layout_gravity="center_vertical"
                 android:clickable="true"
                 android:onClick="view"
-                android:background="@drawable/color3"/>
+                android:background="@drawable/color3"
+                />
 
             <View
                 android:id="@+id/circle4"
@@ -163,7 +169,8 @@
                 android:layout_gravity="center_vertical"
                 android:clickable="true"
                 android:onClick="view"
-                android:background="@drawable/color4"/>
+                android:background="@drawable/color4"
+                />
 
         </LinearLayout>
     </LinearLayout>

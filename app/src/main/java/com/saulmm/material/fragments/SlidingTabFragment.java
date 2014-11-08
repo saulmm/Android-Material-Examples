@@ -34,9 +34,9 @@ public class SlidingTabFragment extends Fragment {
     static final String LOG_TAG = "SlidingTabsBasicFragment";
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_sliding, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        return inflater.inflate(R.layout.fragment_dialer_sliding, container, false);
     }
 
     @Override
