@@ -26,4 +26,6 @@
         <item>#</item>
     </string-array>
 
+    <string name="title_activity_elevation_sample">ElevationSampleActivity</string>
+
 </resources>
