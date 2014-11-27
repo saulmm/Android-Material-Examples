@@ -34,3 +34,9 @@ Commit - **eb20707**
 
 ![](https://lh6.googleusercontent.com/-t40vK2mcvkI/VF4-e7AzhBI/AAAAAAAAwnQ/lyzfRIj9heo/w800-h1422-no/dialer.gif)
 
+
+## Using StateListAnimator to change the elevation of a view smootly
+
+Commit - **3f1102b**
+
+![](https://lh4.googleusercontent.com/-qqERGSF7t7Q/VHdlcZmbPgI/AAAAAAAAx1Q/CPo4dJk2_MM/w364-h644-no/elevation_sample.gif)
