@@ -1,8 +1,8 @@
 # Project-wide Gradle settings.
 
 # IDE (e.g. Android Studio) users:
-# Settings specified in this file will override any Gradle settings
-# configured through the IDE.
+# Gradle settings configured through the IDE *will override*
+# any settings specified in this file.
 
 # For more details on how to configure your build environment visit
 # http://www.gradle.org/docs/current/userguide/build_environment.html
