@@ -14,20 +14,20 @@
         />
 
     <View
-        android:id="@+id/dialer_toolbar"
+        android:id="@+id/activity_transition_header"
         android:layout_width="match_parent"
         android:background="?android:colorPrimary"
         android:layout_height="?attr/actionBarSize"
         />
 
         <RelativeLayout
-            android:id="@+id/holder_view"
+            android:id="@+id/activity_transition_header"
             android:layout_width="match_parent"
             android:layout_height="168dp"
             android:paddingLeft="72dp"
             android:paddingRight="16dp"
             android:transitionName="holder1"
-            android:layout_below="@id/dialer_toolbar"
+            android:layout_below="@id/activity_transition_header"
             android:background="?android:colorPrimary"
             >
 
@@ -56,7 +56,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:orientation="vertical"
-        android:layout_below="@id/holder_view">
+        android:layout_below="@id/activity_transition_header">
 
         <TextView
             android:layout_width="match_parent"
@@ -185,7 +185,7 @@
         android:background="@drawable/ripple_round"
         android:stateListAnimator="@anim/fab_anim"
         android:elevation="4dp"
-        android:layout_below="@+id/holder_view"
+        android:layout_below="@+id/activity_transition_header"
         android:layout_marginTop="-26dp"
         android:layout_alignParentEnd="true"
         />

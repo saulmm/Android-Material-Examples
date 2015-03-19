@@ -12,8 +12,21 @@
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
-
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+    
+    
+    <style name="TransitionSampleActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimaryDark">@color/color_set_1_primary</item>
+        <item name="android:colorPrimary">@color/color_set_1_primary</item>
+        <item name="android:colorAccent">@color/color_set_1_accent</item>
+    </style>
+
+    <style name="TransitionSampleSecondActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimaryDark">@color/color_set_1_primary</item>
+        <item name="android:colorPrimary">@color/color_set_1_primary</item>
+        <item name="android:colorAccent">@color/color_set_1_accent</item>
+        <item name="android:windowExitTransition">@android:transition/slide_top</item>
     </style>
 
     <style name="theme1" parent="AppTheme">

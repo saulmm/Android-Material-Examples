@@ -4,15 +4,17 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Slide;
 import android.util.Pair;
+import android.view.Gravity;
 import android.view.View;
 
 import com.saulmm.material.R;
-import com.saulmm.material.utils.GUIUtils;
 
 public class TransitionFirstActivity extends Activity {
 
-    private View fabButton;
+    private View mFabButton;
+    private View mHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,26 +22,24 @@ public class TransitionFirstActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition_first);
 
-        // Set explode animation when enter and exit the activity
-        GUIUtils.configureWindowEnterExitExplodeTransition(getWindow());
+        mFabButton = findViewById(R.id.fab_button);
+        mHeader = findViewById(R.id.activity_transition_header);
 
-        // Fab Button
-        fabButton = findViewById(R.id.fab_button);
-        fabButton.setOnClickListener(fabClickListener);
-        GUIUtils.configureFab(fabButton);
+        Slide slideExitTransition = new Slide(Gravity.BOTTOM);
+        slideExitTransition.excludeTarget(android.R.id.navigationBarBackground, true);
+        slideExitTransition.excludeTarget(android.R.id.statusBarBackground, true);
+        slideExitTransition.excludeTarget(R.id.activity_transition_header, true);
+        getWindow().setExitTransition(slideExitTransition);
     }
 
+    public void onFabPressed(View view) {
 
-    View.OnClickListener fabClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
+        Intent i  = new Intent (TransitionFirstActivity.this,
+            TransitionSecondActivity.class);
 
-        Intent i  = new Intent (TransitionFirstActivity.this, TransitionSecondActivity.class);
-
-        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(TransitionFirstActivity.this,
-                Pair.create(fabButton, "fab"));
+        ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
+            this, Pair.create(mFabButton, "fab"), Pair.create(mHeader, "holder1"));
 
         startActivity(i, transitionActivityOptions.toBundle());
-        }
-    };
+    }
 }

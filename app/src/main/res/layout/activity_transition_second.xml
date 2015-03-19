@@ -7,17 +7,18 @@
     >
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/dialer_toolbar"
+        android:id="@+id/activity_transition_header"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:background="?android:colorPrimary"
+        android:transitionName="holder1"
         android:minHeight="?attr/actionBarSize"/>
 
     <LinearLayout
         android:id="@+id/row_container2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/dialer_toolbar"
+        android:layout_below="@id/activity_transition_header"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:paddingLeft="@dimen/activity_horizontal_margin"

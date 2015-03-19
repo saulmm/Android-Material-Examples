@@ -7,7 +7,7 @@
     >
 
     <View
-        android:id="@+id/holder_view"
+        android:id="@+id/activity_transition_header"
         android:layout_width="match_parent"
         android:layout_height="144dp"
         android:transitionName="holder1"
@@ -15,18 +15,18 @@
         />
 
     <Button
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/fab_button"
-        android:transitionName="fab"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
+        android:layout_marginTop="-26dp"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/activity_transition_header"
+        android:layout_alignParentEnd="true"
+        android:elevation="5dp"
         android:background="@drawable/ripple_round"
         android:stateListAnimator="@anim/fab_anim"
-        android:elevation="5dp"
-        android:layout_below="@+id/holder_view"
-        android:layout_marginTop="-26dp"
-        android:layout_alignParentEnd="true"
+        android:onClick="onFabPressed"
+        android:transitionName="fab"
         />
 
     <RelativeLayout
@@ -35,7 +35,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_horizontal_margin"
-        android:layout_below="@id/holder_view">
+        android:layout_below="@id/activity_transition_header">
 
         <Button
             android:layout_width="150dp"

@@ -3,11 +3,8 @@ package com.saulmm.material.utils;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Outline;
-import android.transition.Explode;
 import android.transition.Fade;
-import android.transition.Slide;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewPropertyAnimator;
@@ -33,7 +30,6 @@ public class GUIUtils {
 
         int fabSize = fabButton.getContext().getResources()
             .getDimensionPixelSize(R.dimen.fab_size);
-
         Outline fabOutLine = new Outline();
         fabOutLine.setOval(0, 0, fabSize, fabSize);
     }
