@@ -38,7 +38,7 @@ public class TransitionFirstActivity extends Activity {
             TransitionSecondActivity.class);
 
         ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
-            this, Pair.create(mFabButton, "fab"), Pair.create(mHeader, "holder1"));
+            TransitionFirstActivity.this,Pair.create(mFabButton, "fab"), Pair.create(mHeader, "holder1"));
 
         startActivity(i, transitionActivityOptions.toBundle());
     }

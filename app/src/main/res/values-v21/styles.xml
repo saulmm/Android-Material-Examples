@@ -26,7 +26,6 @@
         <item name="android:colorPrimaryDark">@color/color_set_1_primary</item>
         <item name="android:colorPrimary">@color/color_set_1_primary</item>
         <item name="android:colorAccent">@color/color_set_1_accent</item>
-        <item name="android:windowExitTransition">@android:transition/slide_top</item>
     </style>
 
     <style name="theme1" parent="AppTheme">

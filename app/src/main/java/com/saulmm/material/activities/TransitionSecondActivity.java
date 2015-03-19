@@ -27,10 +27,9 @@ public class TransitionSecondActivity extends Activity {
 
         rowContainer = (LinearLayout) findViewById(R.id.row_container2);
 
-        Slide slideExitTransition = new Slide(Gravity.TOP);
+        Slide slideExitTransition = new Slide(Gravity.BOTTOM);
         slideExitTransition.excludeTarget(android.R.id.navigationBarBackground, true);
         slideExitTransition.excludeTarget(android.R.id.statusBarBackground, true);
-        getWindow().setEnterTransition(slideExitTransition);
 
 
         getWindow().getEnterTransition().addListener(new TransitionAdapter() {
