@@ -3,10 +3,12 @@
 
     <string name="app_name">My Application</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_my_activity2">MyActivity2</string>
     <string name="action_example">Example action</string>
+
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
     <string name="title_activity_color">ColorActivity</string>
+    <string name="title_activity_my_activity2">MyActivity2</string>
+    <string name="title_activity_coordinator">Coordinator example</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_closed">Close</string>
 

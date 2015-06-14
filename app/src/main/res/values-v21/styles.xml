@@ -3,9 +3,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- android theme colors -->
-        <item name="android:colorPrimary">@color/theme_dialer_primary</item>
-        <item name="android:colorPrimaryDark">@color/theme_dialer_high</item>
-        <item name="android:colorAccent">@color/theme_dialer_accent</item>
+        <item name="colorPrimary">@color/theme_dialer_primary</item>
+        <item name="colorPrimaryDark">@color/theme_dialer_high</item>
+        <item name="colorAccent">@color/theme_dialer_accent</item>
         <item name="android:navigationBarColor">@color/theme_dialer_primary</item>
 
         <!-- android transitions -->

@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.saulmm.material" >
+<manifest
+    package="com.saulmm.material"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label=""
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        >
 
-        <activity android:name="com.saulmm.material.activities.TransitionFirstActivity"
-            android:theme="@style/TransitionSampleActivity">
+        <activity
+            android:name=".activities.TransitionFirstActivity"
+            android:theme="@style/TransitionSampleActivity"
+            >
 
+        </activity>
+
+        <activity
+            android:name=".activities.TransitionSecondActivity"
+            android:theme="@style/TransitionSampleSecondActivity"
+            />
+
+        <activity android:name=".activities.SlidingActivity"/>
+
+        <activity
+            android:name=".activities.DialerSampleActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".activities.ColorActivity"
+            android:label="@string/title_activity_color"
+            />
+
+        <activity
+            android:name=".activities.ElevationSampleActivity"
+            android:label="@string/title_activity_elevation_sample"
+            />
+
+        <activity android:name=".activities.CoordinatorActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name="com.saulmm.material.activities.TransitionSecondActivity"
-            android:theme="@style/TransitionSampleSecondActivity"/>
-
-        <activity android:name="com.saulmm.material.activities.SlidingActivity" >
-        </activity>
-        <activity
-            android:name="com.saulmm.material.activities.DialerSampleActivity"
-            android:screenOrientation="portrait" >
-
-        </activity>
-        <activity
-            android:name="com.saulmm.material.activities.ColorActivity"
-            android:label="@string/title_activity_color" />
-        <activity
-            android:name="com.saulmm.material.activities.ElevationSampleActivity"
-            android:label="@string/title_activity_elevation_sample" >
-
-
         </activity>
     </application>
 
