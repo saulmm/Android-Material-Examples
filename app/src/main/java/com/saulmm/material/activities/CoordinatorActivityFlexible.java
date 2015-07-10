@@ -5,12 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-
 import com.saulmm.material.R;
 import com.saulmm.material.adapters.RecyclerSimpleAdapter;
 import com.saulmm.material.utils.Utils;
 
-public class CoordinatorActivity extends AppCompatActivity {
+public class CoordinatorActivityFlexible extends AppCompatActivity {
 
     public final static int FAKE_DATA_COUNT = 100;
 
@@ -21,10 +20,10 @@ public class CoordinatorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coordinator);
+        setContentView(R.layout.activity_coordinator_flexible);
 
         initToolbar();
-        initRecycler();
+        //initRecycler();
     }
 
     private void initRecycler() {

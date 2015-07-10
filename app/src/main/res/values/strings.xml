@@ -9,6 +9,8 @@
     <string name="title_activity_color">ColorActivity</string>
     <string name="title_activity_my_activity2">MyActivity2</string>
     <string name="title_activity_coordinator">Coordinator example</string>
+    <string name="title_activity_coordinator_flexible">Coordinator Flex</string>
+
     <string name="drawer_open">Open</string>
     <string name="drawer_closed">Close</string>
 
