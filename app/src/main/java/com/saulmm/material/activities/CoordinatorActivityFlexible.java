@@ -23,7 +23,7 @@ public class CoordinatorActivityFlexible extends AppCompatActivity {
         setContentView(R.layout.activity_coordinator_flexible);
 
         initToolbar();
-        //initRecycler();
+        initRecycler();
     }
 
     private void initRecycler() {

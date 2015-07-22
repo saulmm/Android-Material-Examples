@@ -4,25 +4,24 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.saulmm.material.R;
-
 import java.util.List;
 
 public class RecyclerSimpleAdapter extends RecyclerView.Adapter<RecyclerSimpleViewholder> {
 
+    private final int mItemLayout;
     private List<String> mData;
 
-    public RecyclerSimpleAdapter(List<String> mData) {
+    public RecyclerSimpleAdapter(List<String> data, int itemLayout) {
 
-        this.mData = mData;
+        mData = data;
+        mItemLayout = itemLayout;
     }
 
     @Override
     public RecyclerSimpleViewholder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.item_simple_viewholder, parent, false);
+                mItemLayout, parent, false);
 
         return new RecyclerSimpleViewholder(itemView);
     }
