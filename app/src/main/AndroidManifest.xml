@@ -40,12 +40,15 @@
             android:label="@string/title_activity_elevation_sample"
             />
 
-        <activity android:name=".activities.CoordinatorActivity">
+        <activity android:name=".activities.CoordinatorActivity"/>
+
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
