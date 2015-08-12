@@ -13,6 +13,9 @@
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
     
     
