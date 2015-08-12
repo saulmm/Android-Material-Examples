@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import com.saulmm.material.R;
+import com.saulmm.material.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements
 	NavigationView.OnNavigationItemSelectedListener {
@@ -22,7 +23,15 @@ public class MainActivity extends AppCompatActivity implements
 		initUI();
 		initToolbar();
 		initNavigationView();
+		initHomeFragment();
 
+	}
+
+	private void initHomeFragment() {
+
+		getSupportFragmentManager().beginTransaction()
+			.add(R.id.activity_main_container_framelayout, new HomeFragment())
+			.commit();
 	}
 
 	private void initUI() {
@@ -39,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements
 
 	private void initNavigationView() {
 
-		NavigationView mNavigationView = (NavigationView) findViewById(R.id.activity_main_navigation_view);
+		NavigationView mNavigationView = (NavigationView) findViewById(R.id.activity_main_navigationview);
 		mNavigationView.setNavigationItemSelectedListener(this);
 	}
 

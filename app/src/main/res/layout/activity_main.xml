@@ -2,19 +2,20 @@
 <android.support.v4.widget.DrawerLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:id="@+id/activity_main_drawerlayout"
+	android:id="@+id/activity.main.drawerlayout"
 	android:layout_height="match_parent"
 	android:layout_width="match_parent"
 	android:fitsSystemWindows="true"
 	>
 
-	<FrameLayout
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+		android:orientation="vertical"
 		>
 
 		<android.support.v7.widget.Toolbar
-			android:id="@+id/activity_main_toolbar"
+			android:id="@+id/activity.main.toolbar"
 			android:minHeight="?attr/actionBarSize"
 			android:background="?colorPrimary"
 			android:layout_width="match_parent"
@@ -24,10 +25,16 @@
 			app:title="@string/app_name"
 			app:navigationIcon="@drawable/ic_action_menu"
 			/>
-	</FrameLayout>
+
+		<FrameLayout
+			android:id="@+id/activity.main.container.framelayout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			/>
+	</LinearLayout>
 
 	<android.support.design.widget.NavigationView
-		android:id="@+id/activity_main_navigation_view"
+		android:id="@+id/activity.main.navigationview"
 		android:layout_height="match_parent"
 		android:layout_width="wrap_content"
 		android:layout_gravity="start"
