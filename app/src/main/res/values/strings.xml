@@ -29,5 +29,7 @@
     </string-array>
 
     <string name="title_activity_elevation_sample">ElevationSampleActivity</string>
+    <string name="menu_github">Github</string>
+    <string name="material_text">This project focuses on different concepts and examples to illustrate the \'visual language\' Material Design.</string>
 
 </resources>

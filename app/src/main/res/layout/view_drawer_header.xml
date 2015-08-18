@@ -16,7 +16,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_gravity="bottom"
-		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:paddingBottom="@dimen/spacing_normal"
 		android:paddingLeft="@dimen/activity_horizontal_margin"
 		android:textColor="@android:color/white"
 		android:textSize="22sp"

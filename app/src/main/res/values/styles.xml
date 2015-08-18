@@ -1,27 +1,33 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/theme_dialer_primary</item>
-        <item name="colorPrimaryDark">@color/theme_dialer_high</item>
-        <item name="colorAccent">@color/theme_dialer_accent</item>
-    </style>
+	<style name="MaterialExamples"/>
 
-    <style name="MaterialExamples"/>
+	<style name="MaterialExamples.ViewGroup"/>
 
-    <style name="MaterialExamples.ViewGroup"/>
+	<style name="MaterialExamples.ViewGroup.Main">
+		<item name="android:paddingTop">@dimen/spacing_normal</item>
+		<item name="android:paddingBottom">@dimen/spacing_normal</item>
+		<item name="android:paddingLeft">@dimen/spacing_normal</item>
+		<item name="android:paddingRight">@dimen/spacing_normal</item>
+	</style>
 
-    <style name="MaterialExamples.ViewGroup.Main">
-        <item name="android:paddingTop">@dimen/spacing_normal</item>
-        <item name="android:paddingBottom">@dimen/spacing_normal</item>
-        <item name="android:paddingLeft">@dimen/spacing_normal</item>
-        <item name="android:paddingRight">@dimen/spacing_normal</item>
-    </style>
+	<style name="MaterialExamples.ViewGroup.Small">
+		<item name="android:paddingTop">@dimen/spacing_small</item>
+		<item name="android:paddingBottom">@dimen/spacing_small</item>
+		<item name="android:paddingLeft">@dimen/spacing_small</item>
+		<item name="android:paddingRight">@dimen/spacing_small</item>
+	</style>
 
-    <style name="MaterialExamples.ViewGroup.Small">
-        <item name="android:paddingTop">@dimen/spacing_small</item>
-        <item name="android:paddingBottom">@dimen/spacing_small</item>
-        <item name="android:paddingLeft">@dimen/spacing_small</item>
-        <item name="android:paddingRight">@dimen/spacing_small</item>
-    </style>
 
+	<style name="DrawerArrowStyle"
+		parent="Widget.AppCompat.DrawerArrowToggle">
+		<item name="spinBars">true</item>
+		<item name="color">@android:color/white</item>
+	</style>
+
+	<style name="SlidingTextViewStyle"
+		parent="@android:style/Widget.TextView">
+		<item name="android:fontFamily">sans-serif-medium</item>
+		<item name="android:textColor">#FFF</item>
+	</style>
 </resources>

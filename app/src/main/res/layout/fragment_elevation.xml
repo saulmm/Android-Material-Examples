@@ -6,14 +6,6 @@
     android:background="#EAEAEA"
     >
 
-    <android.support.v7.widget.Toolbar
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:background="?android:colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:elevation="5dp"
-        />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +42,7 @@
             android:layout_width="100dp"
             android:layout_height="96dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/spacing_normal"
             android:stateListAnimator="@drawable/translation_selector"
             android:elevation="2dp"
             android:clickable="true"

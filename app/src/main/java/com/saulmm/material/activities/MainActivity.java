@@ -2,6 +2,7 @@ package com.saulmm.material.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,14 +24,13 @@ public class MainActivity extends AppCompatActivity implements
 		initUI();
 		initToolbar();
 		initNavigationView();
-		initHomeFragment();
-
+		initFragment(new HomeFragment());
 	}
 
-	private void initHomeFragment() {
+	private void initFragment(Fragment fragment) {
 
 		getSupportFragmentManager().beginTransaction()
-			.add(R.id.activity_main_container_framelayout, new HomeFragment())
+			.add(R.id.activity_main_container_framelayout, fragment)
 			.commit();
 	}
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements
 	private void initToolbar() {
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
-		setSupportActionBar(toolbar);
+		toolbar.inflateMenu(R.menu.menu_home);
 	}
 
 	private void initNavigationView() {
@@ -65,6 +65,20 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public boolean onNavigationItemSelected(MenuItem menuItem) {
+
+		Fragment nextFragment = null;
+
+		switch (menuItem.getItemId()) {
+
+			case R.id.nav_elevation_sample:
+				nextFragment = new ElevationFragment();
+				break;
+
+		}
+
+		if (nextFragment != null)
+			initFragment(nextFragment);
+
 
 		menuItem.setChecked(true);
 		mDrawerLayout.closeDrawers();
