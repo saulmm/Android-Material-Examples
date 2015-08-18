@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="primary">#05B9D1</color>
+    <color name="primary_dark">#0596A5</color>
+
+
     <!-- Theme colors -->
     <color name="theme_light">#F48FB1</color>
     <color name="theme_default_primary">#EC407A</color>
@@ -27,6 +31,9 @@
 
     <color name="color_set_4_primary">#ff8a65</color>
     <color name="color_set_4_accent">#d500f9</color>
+
+
+    <color name="gray_light">#EFEFEF</color>
 
 
 

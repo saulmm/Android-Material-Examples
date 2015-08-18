@@ -27,7 +27,7 @@ public class ColorActivity extends Activity {
 
         // Set the saved theme
         sharedpreferences = getSharedPreferences("test", Context.MODE_PRIVATE);
-        setTheme(sharedpreferences.getInt("theme", R.style.AppTheme));
+        setTheme(sharedpreferences.getInt("theme", R.style.MaterialExamplesTheme));
 
         setContentView(R.layout.activity_color);
 

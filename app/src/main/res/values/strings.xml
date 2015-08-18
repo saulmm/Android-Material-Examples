@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">My Application</string>
+    <string name="app_name">Material Examples</string>
     <string name="action_settings">Settings</string>
     <string name="action_example">Example action</string>
 
@@ -29,5 +29,7 @@
     </string-array>
 
     <string name="title_activity_elevation_sample">ElevationSampleActivity</string>
+    <string name="menu_github">Github</string>
+    <string name="material_text">This project focuses on different concepts and examples to illustrate the \'visual language\' Material Design.</string>
 
 </resources>

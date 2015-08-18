@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="MaterialExamplesTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimary">@color/primary</item>
+		<item name="colorPrimaryDark">@color/primary_dark</item>
+		<item name="colorAccent">@color/primary</item>
+		<item name="android:windowBackground">@color/gray_light</item>
+
+		<!-- android transitions -->
+		<item name="android:windowContentTransitions">true</item>
+		<item name="android:windowAllowEnterTransitionOverlap">true</item>
+		<item name="android:windowAllowReturnTransitionOverlap">true</item>
+		<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+		<item name="android:statusBarColor">@android:color/transparent</item>
+	</style>
+
+
+	<style name="TransitionSampleActivity" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:colorPrimaryDark">@color/color_set_1_primary</item>
+		<item name="android:colorPrimary">@color/color_set_1_primary</item>
+		<item name="android:colorAccent">@color/color_set_1_accent</item>
+	</style>
+
+	<style name="TransitionSampleSecondActivity" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:colorPrimaryDark">@color/color_set_1_primary</item>
+		<item name="android:colorPrimary">@color/color_set_1_primary</item>
+		<item name="android:colorAccent">@color/color_set_1_accent</item>
+	</style>
+
+	<style name="theme1" parent="MaterialExamplesTheme">
+		<item name="android:colorPrimary">@color/color_set_1_primary</item>
+		<item name="android:colorControlActivated">@color/color_set_1_accent</item>
+		<item name="android:colorAccent">@color/color_set_1_accent</item>
+	</style>
+
+	<style name="theme2" parent="MaterialExamplesTheme">
+		<item name="android:colorPrimary">@color/color_set_2_primary</item>
+		<item name="android:colorControlActivated">@color/color_set_2_accent</item>
+		<item name="android:colorAccent">@color/color_set_2_accent</item>
+	</style>
+
+	<style name="theme3" parent="MaterialExamplesTheme">
+		<item name="android:colorPrimary">@color/color_set_3_primary</item>
+		<item name="android:colorControlActivated">@color/color_set_3_accent</item>
+		<item name="android:colorAccent">@color/color_set_3_accent</item>
+	</style>
+
+	<style name="theme4" parent="MaterialExamplesTheme">
+		<item name="android:colorPrimary">@color/color_set_4_primary</item>
+		<item name="android:colorControlActivated">@color/color_set_4_accent</item>
+		<item name="android:colorAccent">@color/color_set_4_accent</item>
+	</style>
+</resources>
