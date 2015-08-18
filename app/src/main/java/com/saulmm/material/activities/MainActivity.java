@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements
 	private void initFragment(Fragment fragment) {
 
 		getSupportFragmentManager().beginTransaction()
-			.add(R.id.activity_main_container_framelayout, fragment)
+			.replace(R.id.activity_main_container_framelayout, fragment)
 			.commit();
 	}
 

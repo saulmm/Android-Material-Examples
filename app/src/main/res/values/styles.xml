@@ -18,6 +18,14 @@
 		<item name="android:paddingRight">@dimen/spacing_small</item>
 	</style>
 
+	<style name="SampleCard">
+		<item name="android:minWidth">100dp</item>
+		<item name="android:minHeight">96dp</item>
+		<item name="android:elevation">2dp</item>
+		<item name="android:clickable">true</item>
+		<item name="android:stateListAnimator">@drawable/translation_selector</item>
+	</style>
+
 
 	<style name="DrawerArrowStyle"
 		parent="Widget.AppCompat.DrawerArrowToggle">
