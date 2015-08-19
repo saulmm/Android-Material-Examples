@@ -22,7 +22,7 @@ public class TransitionFirstActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition_first);
 
-        mFabButton = findViewById(R.id.fab_button);
+        mFabButton = findViewById(R.id.activity_color_fab);
         mHeader = findViewById(R.id.activity_transition_header);
 
         Slide slideExitTransition = new Slide(Gravity.BOTTOM);

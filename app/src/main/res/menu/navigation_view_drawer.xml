@@ -10,6 +10,12 @@
 			android:id="@+id/nav_elevation_sample"
 			android:icon="@drawable/ic_elevation"
 			android:title="Elevation example" />
+
+		<item
+			android:id="@+id/nav_circular_sample"
+			android:icon="@drawable/ic_circle"
+			android:title="Reveal sample" />
+
 		<item
 			android:id="@+id/nav_arrow"
 			android:icon="@drawable/ic_arrow_left"

@@ -11,7 +11,11 @@
 		android:theme="@style/MaterialExamplesTheme"
 		>
 
-		<activity android:name=".activities.MainActivity">
+		<activity
+			android:name=".activities.MainActivity"
+			android:theme="@style/MainActivityTheme"
+			>
+
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
 				<category android:name="android.intent.category.LAUNCHER"/>
@@ -36,11 +40,6 @@
 		<activity
 			android:name=".activities.ColorActivity"
 			android:label="@string/title_activity_color"
-			/>
-
-		<activity
-			android:name=".activities.ElevationFragment"
-			android:label="@string/title_activity_elevation_sample"
 			/>
 
 		<activity android:name=".activities.SlidingActivity"/>

@@ -24,4 +24,8 @@
     <dimen name="block_big">48dp</dimen>
     <dimen name="block_huge">55dp</dimen>
     <dimen name="block_max">72dp</dimen>
+
+    <!-- toolbar -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_height_x2">112dp</dimen>
 </resources>
