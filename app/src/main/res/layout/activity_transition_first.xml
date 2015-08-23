@@ -1,4 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,75 +8,74 @@
     tools:context=".MyActivity"
     >
 
-    <View
+    <android.support.v7.widget.Toolbar
         android:id="@+id/activity_transition_header"
         android:layout_width="match_parent"
-        android:layout_height="144dp"
-        android:transitionName="holder1"
-        android:background="?android:colorPrimary"
+        android:layout_height="@dimen/toolbar_height_x2"
+        android:background="@color/primary"
+        android:elevation="4dp"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        style="@style/ToolBar.WithNavigationBack"
         />
 
-    <Button
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:layout_below="@id/activity_transition_header"
+        android:layout_gravity="center"
+        app:cardCornerRadius="4dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_normal"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shared_element_help"
+                android:lineSpacingExtra="4dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transition type"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:textColor="@color/primary"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:entries="@array/transition_types"
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/activity.color.fab"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
-        android:transitionName="fab"
-        android:layout_marginTop="-26dp"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_below="@+id/activity_transition_header"
+        android:layout_below="@+id/activity.color.toolbar"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:elevation="5dp"
-        android:background="@drawable/ripple_round"
-        android:stateListAnimator="@anim/fab_anim"
-        android:onClick="onFabPressed"
+        android:layout_gravity="right"
+        android:fitsSystemWindows="true"
+        android:layout_marginRight="@dimen/spacing_normal"
+        android:onClick="onFabCLick"
+        app:elevation="8dp"
+        app:pressedTranslationZ="15dp"
+        app:borderWidth="0dp"
+        tools:ignore="RtlHardcoded"
         />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_horizontal_margin"
-        android:layout_below="@id/activity_transition_header">
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text=""
-            android:id="@+id/button"
-            android:layout_below="@+id/button4"
-            android:layout_toStartOf="@+id/button5"
-            android:layout_marginTop="44dp" />
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text=""
-            android:id="@+id/button2"
-            android:layout_below="@+id/button"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="54dp" />
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:id="@+id/button3"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/button2" />
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:id="@+id/button4"
-            android:layout_alignParentStart="true" />
-
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:id="@+id/button5"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/button2" />
-
-    </RelativeLayout>
 
 </RelativeLayout>

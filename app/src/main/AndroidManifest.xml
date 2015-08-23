@@ -14,17 +14,22 @@
 		<activity
 			android:name=".activities.MainActivity"
 			android:theme="@style/MainActivityTheme"
-			>
-		</activity>
-
-		<activity
-			android:name=".activities.TransitionFirstActivity"
-			android:theme="@style/TransitionSampleActivity"
 			/>
 
 		<activity
+			android:name=".activities.TransitionFirstActivity"
+			>
+
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+
+		</activity>
+
+		<activity
 			android:name=".activities.TransitionSecondActivity"
-			android:theme="@style/TransitionSampleSecondActivity"
 			/>
 
 		<activity
@@ -36,14 +41,7 @@
 			android:name=".activities.ColorActivity"
 			android:label="@string/title_activity_color"
 			android:theme="@style/ColorActivityTheme"
-			>
-
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
-
-		</activity>
+			/>
 
 		<activity
 			android:name=".activities.ColorActivity2"

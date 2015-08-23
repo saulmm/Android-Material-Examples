@@ -28,6 +28,12 @@
         <item>#</item>
     </string-array>
 
+    <string-array name="transition_types">
+        <item>Slide</item>
+        <item>Fade</item>
+        <item>Explode</item>
+    </string-array>
+
     <string name="title_activity_elevation_sample">ElevationSampleActivity</string>
     <string name="menu_github">Github</string>
     <string name="material_text">This project focuses on different concepts and examples to illustrate the \'visual language\' Material Design.</string>
@@ -35,5 +41,6 @@
     <string name="reveal_start_help">Pressing the \'fab\' it will begin to transition as background in the next activity</string>
     <string name="title_reveal_activity1">Reveal activity 1</string>
     <string name="title_reveal_activity2">Reveal activity 2</string>
+    <string name="shared_element_help">There are different modes of predefined \'shared elements\' transitions:\'Slide\', \'Explode\' and \'Fade\'</string>
 
 </resources>
