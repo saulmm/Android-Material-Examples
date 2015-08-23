@@ -52,7 +52,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/fab_button"
+        android:id="@+id/activity.color.fab"
         android:layout_width="@dimen/fab_size"
 
         android:transitionName="fab"

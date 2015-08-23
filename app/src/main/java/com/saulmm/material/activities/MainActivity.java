@@ -1,5 +1,6 @@
 package com.saulmm.material.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-
 		initUI();
 		initToolbar();
 		initNavigationView();
@@ -74,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements
 				nextFragment = new ElevationFragment();
 				break;
 
+			case R.id.nav_circular_sample:
+				startActivity(new Intent(MainActivity.this, ColorActivity.class));
+				break;
 		}
 
 		if (nextFragment != null)

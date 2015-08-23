@@ -11,11 +11,10 @@
 		android:theme="@style/MaterialExamplesTheme"
 		>
 
-		<activity android:name=".activities.MainActivity">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
+		<activity
+			android:name=".activities.MainActivity"
+			android:theme="@style/MainActivityTheme"
+			>
 		</activity>
 
 		<activity
@@ -36,11 +35,19 @@
 		<activity
 			android:name=".activities.ColorActivity"
 			android:label="@string/title_activity_color"
-			/>
+			android:theme="@style/ColorActivityTheme"
+			>
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+
+		</activity>
 
 		<activity
-			android:name=".activities.ElevationFragment"
-			android:label="@string/title_activity_elevation_sample"
+			android:name=".activities.ColorActivity2"
+			android:theme="@style/ColorActivityTheme2"
 			/>
 
 		<activity android:name=".activities.SlidingActivity"/>

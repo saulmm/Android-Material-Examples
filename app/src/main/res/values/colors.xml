@@ -3,15 +3,14 @@
 
     <color name="primary">#05B9D1</color>
     <color name="primary_dark">#0596A5</color>
-
+    <color name="accent">#EEFF41</color>
+    <color name="accent_dark">#8F9A17</color>
 
     <!-- Theme colors -->
     <color name="theme_light">#F48FB1</color>
     <color name="theme_default_primary">#EC407A</color>
     <color name="theme_window_background">#2A2A2A</color>
-    <color name="accent">#EEFF41</color>
     <color name="gray_row_color">#ff515252</color>
-
 
     <!-- Dialer theme -->
     <color name="dialer_call">#00C853</color>

@@ -38,4 +38,14 @@
 		<item name="android:fontFamily">sans-serif-medium</item>
 		<item name="android:textColor">#FFF</item>
 	</style>
+
+
+	<style name="ToolBar"/>
+
+
+	<style name="ToolBar.WithNavigationBack">
+		<item name="navigationIcon">@drawable/abc_ic_ab_back_mtrl_am_alpha</item>
+	</style>
+
+
 </resources>
