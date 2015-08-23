@@ -3,179 +3,47 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:fitsSystemWindows="true"
+	android:fitsSystemWindows="false"
 	tools:context="com.saulmm.material.activities.ColorActivity"
 	>
 
-	<LinearLayout
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/activity.color.toolbar"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="vertical"
+		android:layout_height="@dimen/toolbar_height_x2"
+		android:background="?colorPrimary"
+		android:elevation="10dp"
+		style="@style/ToolBar.WithNavigationBack"
+		android:fitsSystemWindows="false"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
 		>
 
-		<android.support.v7.widget.Toolbar
-			android:id="@+id/activity.color.toolbar"
+		<TextView
 			android:layout_width="match_parent"
-			android:layout_height="@dimen/toolbar_height_x2"
-			android:minHeight="?attr/actionBarSize"
-			android:background="?colorPrimary"
-			app:theme="@style/ThemeOverlay.AppCompat.Light"
+			android:layout_height="@dimen/toolbar_height"
+			android:layout_weight="1"
+			style="@style/TextAppearance.AppCompat.Title.Inverse"
+			android:text="Reveal activity 1"
+			android:gravity="center_vertical"
+			android:layout_gravity="bottom"
 			/>
 
-		<android.support.design.widget.FloatingActionButton
-			android:id="@+id/activity.color.fab"
-			android:layout_width="@dimen/fab_size"
-			android:layout_height="@dimen/fab_size"
-			android:stateListAnimator="@anim/fab_anim"
-			android:layout_marginTop="-26dp"
-			android:layout_gravity="right"
-			android:layout_marginRight="@dimen/spacing_normal"
-			app:elevation="@dimen/spacing_small"
-			/>
-
-		<LinearLayout
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:paddingLeft="16dp"
-			android:paddingRight="16dp"
-			android:orientation="vertical"
-			>
-
-			<TextView
-				android:layout_width="match_parent"
-				android:layout_height="48dp"
-				android:text="Controls"
-				android:textColor="?android:colorAccent"
-				android:gravity="center_vertical"
-				/>
+	</android.support.v7.widget.Toolbar>
 
 
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="48dp"
-				android:layout_marginTop="8dp"
-				android:orientation="horizontal"
-				>
-
-				<Switch
-					android:id="@+id/theme_switch"
-					android:layout_width="0dp"
-					android:layout_weight="1"
-					android:layout_height="wrap_content"
-					android:layout_gravity="center_vertical"
-					/>
-
-				<TextView
-					android:layout_width="0dp"
-					android:layout_weight="7"
-					android:layout_height="wrap_content"
-					android:text="Awesome"
-					android:layout_marginLeft="16dp"
-					android:layout_gravity="center_vertical"
-					/>
-
-			</LinearLayout>
-
-			<TextView
-				android:layout_width="match_parent"
-				android:layout_height="48dp"
-				android:text="More controls"
-				android:textColor="?android:colorAccent"
-				android:gravity="center_vertical"
-				/>
-
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="48dp"
-				android:layout_marginTop="8dp"
-				android:orientation="horizontal"
-				>
-
-				<CheckBox
-					android:id="@+id/theme_check"
-					android:layout_width="0dp"
-					android:layout_weight="1"
-					android:layout_height="wrap_content"
-					android:layout_gravity="center_vertical"
-					/>
-
-				<TextView
-					android:layout_width="0dp"
-					android:layout_weight="7"
-					android:layout_height="wrap_content"
-					android:text="Awesome"
-					android:layout_marginLeft="16dp"
-					android:layout_gravity="center_vertical"
-					/>
-
-			</LinearLayout>
-
-			<LinearLayout
-				android:id="@+id/circle_holder"
-				android:layout_width="wrap_content"
-				android:layout_height="96dp"
-				android:layout_marginTop="8dp"
-				android:layout_gravity="center_horizontal"
-				android:orientation="horizontal"
-				>
-
-				<View
-					android:id="@+id/circle1"
-					android:layout_width="48dp"
-					android:layout_height="48dp"
-					android:layout_marginRight="16dp"
-					android:layout_gravity="center_vertical"
-					android:onClick="view"
-					android:clickable="true"
-					android:background="@drawable/color1"
-					/>
-
-				<View
-					android:id="@+id/circle2"
-					android:layout_width="48dp"
-					android:layout_height="48dp"
-					android:layout_marginRight="16dp"
-					android:layout_gravity="center_vertical"
-					android:clickable="true"
-					android:onClick="view"
-					android:background="@drawable/color2"
-					/>
-
-				<View
-					android:id="@+id/circle3"
-					android:layout_width="48dp"
-					android:layout_height="48dp"
-					android:layout_marginRight="16dp"
-					android:layout_gravity="center_vertical"
-					android:clickable="true"
-					android:onClick="view"
-					android:background="@drawable/color3"
-					/>
-
-				<View
-					android:id="@+id/circle4"
-					android:layout_width="48dp"
-					android:layout_height="48dp"
-					android:layout_gravity="center_vertical"
-					android:clickable="true"
-					android:onClick="view"
-					android:background="@drawable/color4"
-					/>
-
-			</LinearLayout>
-		</LinearLayout>
-
-	</LinearLayout>
-
-
-	<View
-		android:id="@+id/reveal_view"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="?android:colorAccent"
-		android:elevation="5dp"
-		android:visibility="invisible"
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/activity.color.fab"
+		android:layout_width="@dimen/fab_size"
+		android:layout_height="@dimen/fab_size"
+		android:layout_below="@+id/activity.color.toolbar"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="-26dp"
+		android:layout_gravity="right"
+		android:layout_marginRight="@dimen/spacing_normal"
+		android:onClick="start"
+		app:elevation="12dp"
+		app:pressedTranslationZ="15dp"
+		app:borderWidth="0dp"
+		tools:ignore="RtlHardcoded"
 		/>
-
-
 </RelativeLayout>

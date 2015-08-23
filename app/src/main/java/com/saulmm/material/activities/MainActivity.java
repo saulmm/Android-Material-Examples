@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-
 		initUI();
 		initToolbar();
 		initNavigationView();

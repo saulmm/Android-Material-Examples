@@ -4,7 +4,7 @@
 	<style name="MaterialExamplesTheme" parent="Theme.AppCompat.Light.NoActionBar">
 		<item name="colorPrimary">@color/primary</item>
 		<item name="colorPrimaryDark">@color/primary_dark</item>
-		<item name="colorAccent">@color/primary</item>
+		<item name="colorAccent">@color/accent</item>
 		<item name="android:windowBackground">@color/gray_light</item>
 
 		<!-- android transitions -->
@@ -17,6 +17,16 @@
 	<style name="MainActivityTheme" parent="MaterialExamplesTheme">
 		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
 		<item name="android:statusBarColor">@android:color/transparent</item>
+	</style>
+
+	<style name="ColorActivityTheme" parent="MaterialExamplesTheme">
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+		<item name="android:statusBarColor">@android:color/transparent</item>
+	</style>
+
+	<style name="ColorActivityTheme2" parent="MaterialExamplesTheme">
+		<item name="android:windowBackground">@color/accent</item>
+		<item name="colorPrimaryDark">@color/accent_dark</item>
 	</style>
 
 	<style name="TransitionSampleActivity" parent="MaterialExamplesTheme">

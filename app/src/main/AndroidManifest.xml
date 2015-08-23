@@ -40,6 +40,12 @@
 		<activity
 			android:name=".activities.ColorActivity"
 			android:label="@string/title_activity_color"
+			android:theme="@style/ColorActivityTheme"
+			/>
+
+		<activity
+			android:name=".activities.ColorActivity2"
+			android:theme="@style/ColorActivityTheme2"
 			/>
 
 		<activity android:name=".activities.SlidingActivity"/>
