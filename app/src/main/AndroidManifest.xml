@@ -15,11 +15,6 @@
 			android:name=".activities.MainActivity"
 			android:theme="@style/MainActivityTheme"
 			>
-
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
 		</activity>
 
 		<activity
@@ -41,7 +36,14 @@
 			android:name=".activities.ColorActivity"
 			android:label="@string/title_activity_color"
 			android:theme="@style/ColorActivityTheme"
-			/>
+			>
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+
+		</activity>
 
 		<activity
 			android:name=".activities.ColorActivity2"

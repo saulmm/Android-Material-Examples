@@ -9,10 +9,10 @@
 		android:duration="350"
 		android:startOffset="0"
 		android:fromXDelta="0"
-		android:fromYDelta="0"
-		android:fillAfter="true"
+		android:fromYDelta="-100%"
 		android:toXDelta="0"
-		android:toYDelta="100%"
+		android:fillAfter="true"
+		android:toYDelta="0%"
 		/>
 </set>
  
