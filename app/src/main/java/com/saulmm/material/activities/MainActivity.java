@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity implements
 
 		switch (menuItem.getItemId()) {
 
+			case R.id.drawer_transitions:
+				startActivity(new Intent(MainActivity.this, TransitionFirstActivity.class));
+				break;
+
 			case R.id.nav_elevation_sample:
 				nextFragment = new ElevationFragment();
 				break;

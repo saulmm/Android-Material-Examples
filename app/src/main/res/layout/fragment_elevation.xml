@@ -9,7 +9,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_medium"
             android:layout_gravity="center"
             app:cardCornerRadius="4dp"
             style="@style/SampleCard"
@@ -19,7 +19,7 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="96dp"
-            android:layout_marginTop="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_medium"
             app:cardCornerRadius="4dp"
             style="@style/SampleCard"
             />
@@ -28,7 +28,7 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="96dp"
-            android:layout_marginTop="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_medium"
             app:cardCornerRadius="4dp"
             style="@style/SampleCard"
             />

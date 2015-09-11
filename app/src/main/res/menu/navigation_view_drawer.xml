@@ -3,9 +3,9 @@
 
 	<group android:checkableBehavior="single">
 		<item
-			android:id="@+id/material_animations"
-			android:icon="@drawable/ic_animations"
-			android:title="Material animations" />
+			android:id="@+id/drawer.transitions"
+			android:icon="@drawable/ic_transitions_grey"
+			android:title="Activity transitions" />
 		<item
 			android:id="@+id/nav_elevation_sample"
 			android:icon="@drawable/ic_elevation"

@@ -14,7 +14,7 @@
     <!-- Spacing -->
     <dimen name="spacing_micro">4dp</dimen>
     <dimen name="spacing_small">8dp</dimen>
-    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
     <dimen name="spacing_huge">32dp</dimen>
 
     <!-- Blocks -->
@@ -24,6 +24,12 @@
     <dimen name="block_big">48dp</dimen>
     <dimen name="block_huge">55dp</dimen>
     <dimen name="block_max">72dp</dimen>
+
+    <!-- elevation -->
+    <dimen name="elevation_micro">2dp</dimen>
+    <dimen name="elevation_small">4dp</dimen>
+    <dimen name="elevation_medium">8dp</dimen>
+    <dimen name="elevation_large">16dp</dimen>
 
     <!-- toolbar -->
     <dimen name="toolbar_height">56dp</dimen>

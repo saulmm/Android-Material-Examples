@@ -2,29 +2,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/spacing_normal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MyActivity"
     >
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/activity_transition_header"
+        android:id="@+id/example.transition.header"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:background="?android:colorPrimary"
         android:transitionName="holder1"
-        android:minHeight="?attr/actionBarSize"/>
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="@dimen/elevation_small"
+        app:title="@string/title_activity_transition"
+        style="@style/ToolBar.WithNavigationBack"
+        />
 
     <LinearLayout
         android:id="@+id/row_container2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/activity_transition_header"
+        android:layout_below="@id/example.transition.header"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/spacing_normal"
-        android:paddingBottom="@dimen/spacing_normal">
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_medium">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/example.transition.header"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/spacing_small"
+            app:cardCornerRadius="4dp"
+            app:contentPadding="@dimen/spacing_medium"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transitions_activity2_help"
+                android:lineSpacingExtra="4dp"
+                />
+        </android.support.v7.widget.CardView>
+
 
         <include
             android:id="@+id/sample_row1"
@@ -42,26 +65,21 @@
             android:id="@+id/sample_row4"
             layout="@layout/view_sample_row"/>
 
-        <include
-            android:id="@+id/sample_row5"
-            layout="@layout/view_sample_row"/>
 
-        <include
-            android:id="@+id/sample_row6"
-            layout="@layout/view_sample_row"/>
     </LinearLayout>
 
-    <Button
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/activity.color.fab"
-        android:layout_width="@dimen/fab_size"
-
-        android:transitionName="fab"
-        android:layout_height="@dimen/fab_size"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:background="@drawable/ripple_round"
-        android:stateListAnimator="@anim/fab_anim"
-        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:transitionName="fab"
+        android:elevation="@dimen/elevation_medium"
+        android:src="@drawable/ic_arrow_back_24dp"
+        android:onClick="onFabCLick"
+        app:fabSize="normal"
+        />
 
 </RelativeLayout>

@@ -5,10 +5,10 @@
 	<style name="MaterialExamples.ViewGroup"/>
 
 	<style name="MaterialExamples.ViewGroup.Main">
-		<item name="android:paddingTop">@dimen/spacing_normal</item>
-		<item name="android:paddingBottom">@dimen/spacing_normal</item>
-		<item name="android:paddingLeft">@dimen/spacing_normal</item>
-		<item name="android:paddingRight">@dimen/spacing_normal</item>
+		<item name="android:paddingTop">@dimen/spacing_medium</item>
+		<item name="android:paddingBottom">@dimen/spacing_medium</item>
+		<item name="android:paddingLeft">@dimen/spacing_medium</item>
+		<item name="android:paddingRight">@dimen/spacing_medium</item>
 	</style>
 
 	<style name="MaterialExamples.ViewGroup.Small">
