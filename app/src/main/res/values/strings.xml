@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_example">Example action</string>
 
+    <string name="title_activity_transition">Transitions example</string>
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
     <string name="title_activity_color">ColorActivity</string>
     <string name="title_activity_my_activity2">MyActivity2</string>
@@ -41,6 +42,14 @@
     <string name="reveal_start_help">Pressing the \'fab\' it will begin to transition as background in the next activity</string>
     <string name="title_reveal_activity1">Reveal activity 1</string>
     <string name="title_reveal_activity2">Reveal activity 2</string>
-    <string name="shared_element_help">There are different modes of predefined \'shared elements\' transitions:\'Slide\', \'Explode\' and \'Fade\'</string>
+    <string name="transitions_activity1_help">There are three types of predefined activity transitions, included in the Android Framework: Slide, Fade and Explode.\n
+
+\nThe Slide transition, accepts a Gravity in its construchor, which indicate from where they have to move (slide) the items containing the Activity.\n\n
+
+The Fade transition, changes the opacity of the elements of the layout, can be configured if the Fade will \'fade in\' or \'fade out\'.\n\n
+
+The Explode transition will translate out all elements mimicking an explosion.</string>
+    <string name="transitions_activity2_help">This activity shows how to be aware of the events of transitions, animations and implement accordingly</string>
+    <string name="header_transition_type">Transition type</string>
 
 </resources>

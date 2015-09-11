@@ -52,7 +52,7 @@ public class SlidingActivity extends ActionBarActivity {
     }
 
     private void configureToolbar() {
-        Toolbar mainToolbar = (Toolbar) findViewById(R.id.activity_transition_header);
+        Toolbar mainToolbar = (Toolbar) findViewById(R.id.example_transition_header);
         setSupportActionBar(mainToolbar);
         getSupportActionBar().setTitle("Sliding");
 
