@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+
 import com.saulmm.material.R;
 import com.saulmm.material.fragments.HomeFragment;
 
@@ -44,6 +46,19 @@ public class MainActivity extends AppCompatActivity implements
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
 		toolbar.inflateMenu(R.menu.menu_home);
+		toolbar.setNavigationIcon(R.drawable.ic_menu);
+		setSupportActionBar(toolbar);
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+
+				if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
+					mDrawerLayout.closeDrawer(Gravity.START);
+				} else {
+					mDrawerLayout.openDrawer(Gravity.START);
+				}
+			}
+		});
 	}
 
 	private void initNavigationView() {
@@ -56,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements
 	public boolean onOptionsItemSelected(MenuItem item) {
 
 		if (item.getItemId() == android.R.id.home) {
-			mDrawerLayout.openDrawer(Gravity.LEFT);
+			mDrawerLayout.openDrawer(Gravity.START);
 			return true;
 		}
 
