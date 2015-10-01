@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity implements
 			case R.id.nav_circular_sample:
 				startActivity(new Intent(MainActivity.this, ColorActivity.class));
 				break;
+
+			case R.id.nav_arrow:
+				startActivity(new Intent(MainActivity.this, SlidingActivity.class));
+				break;
 		}
 
 		if (nextFragment != null)
