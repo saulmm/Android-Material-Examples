@@ -2,10 +2,10 @@
 <resources>
 
     <color name="primary">#05B9D1</color>
-    <color name="primary_medium">#04a6bc</color>
-    <color name="primary_dark">#0596A5</color>
+    <color name="primary.medium">#04a6bc</color>
+    <color name="primary.dark">#0596A5</color>
     <color name="accent">#EEFF41</color>
-    <color name="accent_dark">#8F9A17</color>
+    <color name="accent.dark">#8F9A17</color>
 
     <!-- Theme colors -->
     <color name="theme_light">#F48FB1</color>
