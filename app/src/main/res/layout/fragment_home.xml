@@ -35,22 +35,6 @@
 				android:lineSpacingExtra="@dimen/spacing_micro"
 				android:text="@string/material_text"
 				/>
-
 		</LinearLayout>
 	</android.support.v7.widget.CardView>
-
-	<android.support.design.widget.FloatingActionButton
-		android:id="@+id/fragment.home.fab"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		android:layout_alignParentEnd="true"
-		android:layout_marginEnd="@dimen/spacing_medium"
-		android:layout_marginBottom="@dimen/spacing_medium"
-		android:clickable="true"
-		android:src="@drawable/ic_menu_github"
-		app:elevation="@dimen/spacing_small"
-		app:pressedTranslationZ="@dimen/spacing_huge"
-		/>
-
 </RelativeLayout>
