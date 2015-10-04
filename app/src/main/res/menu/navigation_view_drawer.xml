@@ -5,35 +5,19 @@
 		<item
 			android:id="@+id/drawer.transitions"
 			android:icon="@drawable/ic_transitions_grey"
-			android:title="Activity transitions" />
+			android:title="@string/drawer.transitions"
+			/>
+
 		<item
 			android:id="@+id/nav_elevation_sample"
 			android:icon="@drawable/ic_elevation"
-			android:title="Elevation example" />
+			android:title="@string/drawer.elevation"
+			/>
 
 		<item
 			android:id="@+id/nav_circular_sample"
 			android:icon="@drawable/ic_circle"
-			android:title="Reveal sample" />
-
-		<item
-			android:id="@+id/nav_arrow"
-			android:icon="@drawable/ic_arrow_left"
-			android:title="Sliding arrow" />
-
-		<item
-			android:id="@+id/nav_ripple"
-			android:icon="@drawable/ic_ripple"
-			android:title="Ripple example"/>
-
-		<item
-			android:id="@+id/nav_dialer"
-			android:icon="@drawable/ic_dialer"
-			android:title="Dialer example"/>
-
-		<item
-			android:id="@+id/nav_tab"
-			android:icon="@drawable/ic_tab"
-			android:title="Tab layout"/>
+			android:title="@string/drawer.reveal"
+			/>
 	</group>
 </menu>

@@ -5,7 +5,6 @@
 	android:id="@+id/activity.main.drawerlayout"
 	android:layout_height="match_parent"
 	android:layout_width="match_parent"
-
 	>
 
 	<LinearLayout
@@ -21,7 +20,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:fitsSystemWindows="true"
-			android:elevation="10dp"
+			android:elevation="@dimen/elevation_medium"
 			app:theme="@style/ThemeOverlay.AppCompat.Dark"
 			app:title="@string/app_name"
 			app:navigationIcon="@drawable/ic_action_menu"
@@ -43,5 +42,4 @@
 		app:menu="@menu/navigation_view_drawer"
 		app:headerLayout="@layout/view_drawer_header"
 		/>
-
 </android.support.v4.widget.DrawerLayout>
