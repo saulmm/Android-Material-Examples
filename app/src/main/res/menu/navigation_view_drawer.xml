@@ -19,5 +19,11 @@
 			android:icon="@drawable/ic_circle"
 			android:title="@string/drawer.reveal"
 			/>
+
+		<item
+			android:id="@+id/drawer.cards"
+			android:icon="@drawable/ic_cards_grey"
+			android:title="Cards"
+			/>
 	</group>
 </menu>

@@ -65,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements
 			case R.id.nav_circular_sample:
 				startActivity(new Intent(MainActivity.this, ColorActivity.class));
 				break;
+
+			case R.id.drawer_cards:
+				startActivity(new Intent(MainActivity.this, CardsActivity.class));
+				break;
 		}
 
 		if (nextFragment != null)

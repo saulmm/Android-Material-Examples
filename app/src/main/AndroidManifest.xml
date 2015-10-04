@@ -15,6 +15,7 @@
 			android:name=".activities.MainActivity"
 			android:theme="@style/MainActivityTheme"
 			>
+
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
 				<category android:name="android.intent.category.LAUNCHER"/>
@@ -29,11 +30,6 @@
 			/>
 
 		<activity
-			android:name=".activities.DialerSampleActivity"
-			android:screenOrientation="portrait"
-			/>
-
-		<activity
 			android:name=".activities.ColorActivity"
 			android:label="@string/title_activity_color"
 			android:theme="@style/ColorActivityTheme"
@@ -44,7 +40,8 @@
 			android:theme="@style/ColorActivityTheme2"
 			/>
 
-		<activity android:name=".activities.SlidingActivity"/>
+		<activity android:name=".activities.CardsActivity"/>
+
 		<activity android:name=".activities.CoordinatorActivity"/>
 	</application>
 </manifest>
