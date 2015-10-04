@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/view_card.viewgroup"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:layout_margin="@dimen/spacing_small"
+	app:cardCornerRadius="4dp"
+	app:cardElevation="@dimen/elevation_small"
+	tools:showIn="@layout/fragment_cards"
+	>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="160dp"
+			android:background="@color/grey"
+			/>
+
+		<Space
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/spacing_large"
+			/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Title goes here"
+			android:layout_marginLeft="@dimen/spacing_medium"
+			android:textAppearance="@style/TextAppearance.AppCompat.Title"
+			/>
+
+		<Space
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/spacing_small"
+			/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/spacing_medium"
+			android:text="Subtitle here"
+			android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+			/>
+
+		<Space
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/spacing_small"
+			/>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			>
+
+			<TextView
+				android:id="@+id/view_card.raw.action.primary"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Action 1"
+				style="@style/Text.Button"
+
+				/>
+
+			<TextView
+				android:id="@+id/view_card.raw.action.secondary"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Action 2"
+				style="@style/Text.Button"
+				/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/view_card.raw.content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="@dimen/spacing_medium"
+			android:paddingRight="@dimen/spacing_medium"
+			android:layout_marginTop="8dp"
+			android:text="@string/cards.text1"
+			style="@style/Text.Body"
+			/>
+
+		<Space
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/spacing_large"
+			/>
+	</LinearLayout>
+</android.support.v7.widget.CardView>
+
+
+	

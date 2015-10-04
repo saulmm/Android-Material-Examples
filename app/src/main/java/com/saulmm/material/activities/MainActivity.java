@@ -11,7 +11,6 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import com.saulmm.material.R;
-import com.saulmm.material.fragments.CardsFragment;
 import com.saulmm.material.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements
 				break;
 
 			case R.id.drawer_cards:
-				nextFragment = new CardsFragment();
+				startActivity(new Intent(MainActivity.this, CardsActivity.class));
 				break;
 		}
 

@@ -1,110 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:padding="@dimen/spacing_small"
 	>
 
-	<android.support.v7.widget.CardView
-	    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-	    android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_gravity="center"
-		card_view:cardCornerRadius="4dp"
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
 		>
 
-		<LinearLayout
+		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:orientation="vertical"
-			>
-			
-			<ImageView
-				android:layout_width="match_parent"
-				android:layout_height="200dp"
-				android:background="@color/grey"
-				/>
-			
-			<Space
-				android:layout_width="match_parent"
-				android:layout_height="@dimen/spacing_large"
-				/>
-			
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Title goes here"
-				android:layout_marginLeft="@dimen/spacing_medium"
-				android:textSize="24sp"
-				android:fontFamily="sans-serif-medium"
-				android:textColor="@color/black"
-				/>
+			android:text="Raw layout"
+			style="@style/Text.Header"
+			/>
 
-			<Space
-				android:layout_width="wrap_content"
-				android:layout_height="@dimen/spacing_small"
-				/>
+		<include layout="@layout/view_card_actions"/>
 
-			<TextView
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="@dimen/spacing_medium"
-				android:text="Subtitle here"
-				android:textSize="16sp"
-				/>
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Filled layout"
+			style="@style/Text.Header"
+			/>
 
-			<Space
-				android:layout_width="match_parent"
-				android:layout_height="@dimen/spacing_medium"
-				/>
-
-			<LinearLayout
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				>
-
-				<Button
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="ACTION 1"
-					android:background="@null"
-					/>
-
-				<Button
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="ACTION 2"
-					android:background="@null"
-					/>
-			</LinearLayout>
-
-			<Space
-				android:layout_width="match_parent"
-				android:layout_height="@dimen/spacing_medium"
-				/>
-
-			<TextView
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:paddingLeft="@dimen/spacing_medium"
-				android:paddingRight="@dimen/spacing_medium"
-				android:text="@string/cards.text1"
-				android:textColor="@color/black"
-				android:textSize="16sp"
-
-				/>
-
-			<Space
-				android:layout_width="match_parent"
-				android:layout_height="@dimen/spacing_large"
-				/>
-
-		</LinearLayout>
-
-
-	</android.support.v7.widget.CardView>
-
-
-</LinearLayout>
+		<include layout="@layout/view_card_actions_filled"/>
+	</LinearLayout>
+</ScrollView>

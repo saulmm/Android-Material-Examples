@@ -26,22 +26,36 @@
 		<item name="android:stateListAnimator">@drawable/translation_selector</item>
 	</style>
 
+	<style name="Text"/>
 
-	<style name="DrawerArrowStyle"
-		parent="Widget.AppCompat.DrawerArrowToggle">
-		<item name="spinBars">true</item>
-		<item name="color">@android:color/white</item>
+	<style name="Text.Body">
+		<item name="android:lineSpacingExtra">4dp</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+
 	</style>
 
-	<style name="SlidingTextViewStyle"
-		parent="@android:style/Widget.TextView">
+	<style name="Text.Button">
+		<item name="android:padding">@dimen/spacing_small_bigger</item>
+		<item name="android:background">?attr/selectableItemBackground</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
+		<item name="android:clickable">true</item>
+	</style>
+
+	<style name="Text.Title">
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+		<item name="android:fontFamily">sans-serif</item>
+	</style>
+
+	<style name="Text.Header">
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:paddingLeft">@dimen/spacing_medium</item>
+		<item name="android:textAllCaps">true</item>
 		<item name="android:fontFamily">sans-serif-medium</item>
-		<item name="android:textColor">#FFF</item>
+		<item name="android:textColor">?colorPrimary</item>
+		<item name="android:minHeight">48dp</item>
 	</style>
-
 
 	<style name="ToolBar"/>
-
 
 	<style name="ToolBar.WithNavigationBack">
 		<item name="navigationIcon">@drawable/abc_ic_ab_back_mtrl_am_alpha</item>
