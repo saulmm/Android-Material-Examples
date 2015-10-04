@@ -27,11 +27,6 @@
 			android:title="Ripple example"/>
 
 		<item
-			android:id="@+id/nav_dialer"
-			android:icon="@drawable/ic_dialer"
-			android:title="Dialer example"/>
-
-		<item
 			android:id="@+id/nav_tab"
 			android:icon="@drawable/ic_tab"
 			android:title="Tab layout"/>
