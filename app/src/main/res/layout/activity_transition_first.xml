@@ -95,5 +95,4 @@
 		app:fabSize="normal"
 		tools:ignore="RtlHardcoded"
 		/>
-
 </RelativeLayout>

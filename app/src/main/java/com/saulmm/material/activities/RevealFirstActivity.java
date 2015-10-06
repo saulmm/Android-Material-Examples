@@ -5,13 +5,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import com.saulmm.material.R;
 import com.saulmm.material.utils.AnimatorAdapter;
 
 @SuppressWarnings("FieldCanBeLocal")
-public class RevealFirstActivity extends Activity {
+public class RevealFirstActivity extends AppCompatActivity {
     public final static float SCALE_FACTOR          = 20f;
     public final static int ANIMATION_DURATION      = 300;
 

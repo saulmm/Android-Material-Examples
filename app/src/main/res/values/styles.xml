@@ -1,29 +1,18 @@
 <resources>
+	<style name="ViewGroup"/>
 
-	<style name="MaterialExamples"/>
-
-	<style name="MaterialExamples.ViewGroup"/>
-
-	<style name="MaterialExamples.ViewGroup.Main">
+	<style name="ViewGroup.Main">
 		<item name="android:paddingTop">@dimen/spacing_medium</item>
 		<item name="android:paddingBottom">@dimen/spacing_medium</item>
 		<item name="android:paddingLeft">@dimen/spacing_medium</item>
 		<item name="android:paddingRight">@dimen/spacing_medium</item>
 	</style>
 
-	<style name="MaterialExamples.ViewGroup.Small">
+	<style name="ViewGroup.Small">
 		<item name="android:paddingTop">@dimen/spacing_small</item>
 		<item name="android:paddingBottom">@dimen/spacing_small</item>
 		<item name="android:paddingLeft">@dimen/spacing_small</item>
 		<item name="android:paddingRight">@dimen/spacing_small</item>
-	</style>
-
-	<style name="SampleCard">
-		<item name="android:minWidth">100dp</item>
-		<item name="android:minHeight">96dp</item>
-		<item name="android:elevation">2dp</item>
-		<item name="android:clickable">true</item>
-		<item name="android:stateListAnimator">@drawable/translation_selector</item>
 	</style>
 
 	<style name="Text"/>
@@ -37,6 +26,7 @@
 		<item name="android:padding">@dimen/spacing_small_bigger</item>
 		<item name="android:background">?attr/selectableItemBackground</item>
 		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
+		<item name="android:textColor">?colorAccent</item>
 		<item name="android:clickable">true</item>
 	</style>
 
@@ -58,7 +48,7 @@
 		<item name="android:background">?colorPrimary</item>
 		<item name="android:elevation">@dimen/elevation_small</item>
 		<item name="android:minHeight">?attr/actionBarSize</item>
-		<item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+		<item name="theme">@style/ThemeOverlay.AppCompat.Dark</item>
 	</style>
 
 	<style name="ToolBar.WithNavigationBack">

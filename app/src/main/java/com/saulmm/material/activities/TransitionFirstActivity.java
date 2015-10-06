@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Explode;
 import android.transition.Fade;
@@ -16,7 +17,7 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import com.saulmm.material.R;
 
-public class TransitionFirstActivity extends Activity
+public class TransitionFirstActivity extends AppCompatActivity
     implements AdapterView.OnItemSelectedListener {
 
     private View mFabButton;

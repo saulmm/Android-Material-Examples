@@ -4,5 +4,6 @@
     android:layout_height="match_parent"
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"
-    android:background="@color/theme_light"
-    tools:context="com.saulmm.material.fragments.NavigationFragment" />
+    android:background="@color/grey.light"
+    tools:context="com.saulmm.material.fragments.NavigationFragment"
+    />

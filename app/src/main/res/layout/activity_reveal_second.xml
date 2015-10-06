@@ -23,6 +23,7 @@
 		android:layout_height="match_parent"
 		android:padding="@dimen/spacing_medium"
 		android:lineSpacingExtra="5dp"
+		android:textColor="@color/white"
 		android:text="@string/reveal_explanation"
 		/>
 </LinearLayout>

@@ -5,19 +5,15 @@
 		<item name="colorPrimary">@color/primary</item>
 		<item name="colorPrimaryDark">@color/primary.dark</item>
 		<item name="colorAccent">@color/accent</item>
-		<item name="android:windowBackground">@color/gray_light</item>
+		<item name="android:windowBackground">@color/grey.light</item>
 		<item name="android:windowContentTransitions">true</item>
 		<item name="android:windowAllowEnterTransitionOverlap">true</item>
 		<item name="android:windowAllowReturnTransitionOverlap">true</item>
+		<item name="android:toolbarStyle">@style/ToolBar</item>
 	</style>
 
-	<style name="MainActivityTheme" parent="MaterialExamplesTheme">
+	<style name="MaterialExamplesTheme.Translucent">
 		<item name="android:windowTranslucentStatus">true</item>
-	</style>
-
-	<style name="ColorActivityTheme" parent="MaterialExamplesTheme">
-		<item name="android:windowTranslucentStatus">true</item>
-
 	</style>
 
 	<style name="ColorActivityTheme2" parent="MaterialExamplesTheme">

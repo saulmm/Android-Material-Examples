@@ -12,7 +12,7 @@
 		>
 		<activity
 			android:name=".activities.MainActivity"
-			android:theme="@style/MainActivityTheme"
+			android:theme="@style/MaterialExamplesTheme.Translucent"
 			>
 
 			<intent-filter>
@@ -21,14 +21,11 @@
 			</intent-filter>
 		</activity>
 
-		<activity android:name=".activities.TransitionFirstActivity"
-			android:theme="@style/MaterialExamplesTheme"/>
+		<activity android:name=".activities.TransitionFirstActivity"/>
 		<activity android:name=".activities.TransitionSecondActivity"/>
 
-		<activity
-			android:name=".activities.RevealFirstActivity"
-			android:label="@string/title_activity_color"
-			android:theme="@style/ColorActivityTheme"
+		<activity android:name=".activities.RevealFirstActivity"
+			android:theme="@style/MaterialExamplesTheme.Translucent"
 			/>
 
 		<activity
@@ -37,7 +34,5 @@
 			/>
 
 		<activity android:name=".activities.CardsActivity"/>
-
-		<activity android:name=".activities.CoordinatorActivity"/>
 	</application>
 </manifest>

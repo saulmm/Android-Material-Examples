@@ -10,12 +10,9 @@
         android:id="@+id/example.transition.header"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="?android:colorPrimary"
         android:transitionName="holder1"
-        android:minHeight="?attr/actionBarSize"
-        android:elevation="@dimen/elevation_small"
-        app:title="@string/title_activity_transition"
         style="@style/ToolBar.WithNavigationBack"
+
         />
 
     <LinearLayout
@@ -64,8 +61,6 @@
         <include
             android:id="@+id/sample_row4"
             layout="@layout/view_sample_row"/>
-
-
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -81,5 +76,4 @@
         android:onClick="onFabCLick"
         app:fabSize="normal"
         />
-
 </RelativeLayout>

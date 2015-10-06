@@ -15,15 +15,12 @@
 
 		<android.support.v7.widget.Toolbar
 			android:id="@+id/activity.main.toolbar"
-			android:minHeight="?attr/actionBarSize"
-			android:background="?colorPrimary"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:fitsSystemWindows="true"
-			android:elevation="@dimen/elevation_medium"
-			app:theme="@style/ThemeOverlay.AppCompat.Dark"
 			app:title="@string/app_name"
 			app:navigationIcon="@drawable/ic_action_menu"
+			style="@style/ToolBar"
 			/>
 
 		<FrameLayout

@@ -45,21 +45,6 @@ public class CardsActivity extends AppCompatActivity implements View.OnClickList
 			});
 	}
 
-	private ValueAnimator slideAnimator(int start, int end) {
-		ValueAnimator animator = ValueAnimator.ofInt(start, end);
-
-		animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-			@Override public void onAnimationUpdate(ValueAnimator valueAnimator) {
-				int value = (Integer) valueAnimator.getAnimatedValue();
-
-				ViewGroup.LayoutParams layoutParams = mContentView.getLayoutParams();
-				layoutParams.height = value;
-				mContentView.setLayoutParams(layoutParams);
-			}
-		});
-		return animator;
-	}
-
 	@Override
 	public void onClick(View v) {
 		if (v.getId() == R.id.view_card_raw_action_primary) {
