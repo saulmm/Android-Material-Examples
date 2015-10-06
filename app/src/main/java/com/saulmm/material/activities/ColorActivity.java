@@ -10,7 +10,6 @@ import com.saulmm.material.R;
 import com.saulmm.material.utils.AnimatorAdapter;
 
 public class ColorActivity extends Activity {
-
     public final static float SCALE_FACTOR          = 20f;
     public final static int ANIMATION_DURATION      = 300;
 
@@ -21,7 +20,6 @@ public class ColorActivity extends Activity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
 
@@ -29,7 +27,6 @@ public class ColorActivity extends Activity {
     }
 
     public void onFabCLick(View view) {
-
         mReturning = false;
 
         mFab.animate()
@@ -56,16 +53,12 @@ public class ColorActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == SECOND_ACTIVITY_REQUEST && resultCode == SECOND_ACTIVITY_END) {
-
             mReturning = true;
 
             mFab.animate()
-                .scaleXBy(SCALE_FACTOR)
-                .scaleYBy(SCALE_FACTOR)
-                .scaleX(1f)
-                .scaleY(1f)
+                .scaleXBy(SCALE_FACTOR).scaleYBy(SCALE_FACTOR)
+                .scaleX(1f).scaleY(1f)
                 .setDuration(ANIMATION_DURATION)
                 .start();
         }
