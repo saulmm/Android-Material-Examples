@@ -1,43 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+    <color name="white">#FFFFFF</color>
+    <color name="grey.light">#dedede</color>
     <color name="grey">#BDBDBD</color>
+    <color name="grey.dark">#696969</color>
     <color name="black">#212121</color>
 
-    <color name="primary">#05B9D1</color>
-    <color name="primary.medium">#04a6bc</color>
-    <color name="primary.dark">#0596A5</color>
-    <color name="accent">#EEFF41</color>
-    <color name="accent.dark">#8F9A17</color>
-
-    <!-- Theme colors -->
-    <color name="theme_light">#F48FB1</color>
-    <color name="theme_default_primary">#EC407A</color>
-    <color name="theme_window_background">#2A2A2A</color>
-    <color name="gray_row_color">#ff515252</color>
-
-    <!-- Dialer theme -->
-    <color name="dialer_call">#00C853</color>
-    <color name="theme_dialer_high">#0277BD</color>
-    <color name="theme_dialer_primary">#0288D1</color>
-    <color name="theme_dialer_accent">#FFF</color>
-
-    <!-- Reveal transition colors -->
-    <color name="color_set_1_primary">#4fc3f7</color>
-    <color name="color_set_1_accent">#009688</color>
-
-    <color name="color_set_2_primary">#42bd41</color>
-    <color name="color_set_2_accent">#673AB7</color>
-
-    <color name="color_set_3_primary">#ffb74d</color>
-    <color name="color_set_3_accent">#E91E63</color>
-
-    <color name="color_set_4_primary">#ff8a65</color>
-    <color name="color_set_4_accent">#d500f9</color>
-
-
-    <color name="gray_light">#EFEFEF</color>
-
-
-
+    <color name="primary">#FF5722</color>
+    <color name="primary.medium">#df4c1e</color>
+    <color name="primary.dark">#E64A19</color>
+    <color name="accent">#FF9800</color>
+    <color name="accent.dark">#d68001</color>
 </resources>

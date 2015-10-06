@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements
 				break;
 
 			case R.id.nav_circular_sample:
-				startActivity(new Intent(MainActivity.this, ColorActivity.class));
+				startActivity(new Intent(MainActivity.this, RevealFirstActivity.class));
 				break;
 
 			case R.id.drawer_cards:

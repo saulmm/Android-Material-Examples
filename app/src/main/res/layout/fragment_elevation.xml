@@ -12,7 +12,6 @@
             android:layout_marginTop="@dimen/spacing_medium"
             android:layout_gravity="center"
             app:cardCornerRadius="4dp"
-            style="@style/SampleCard"
             />
 
         <android.support.v7.widget.CardView
@@ -21,7 +20,6 @@
             android:layout_height="96dp"
             android:layout_marginTop="@dimen/spacing_medium"
             app:cardCornerRadius="4dp"
-            style="@style/SampleCard"
             />
 
         <android.support.v7.widget.CardView
@@ -30,7 +28,6 @@
             android:layout_height="96dp"
             android:layout_marginTop="@dimen/spacing_medium"
             app:cardCornerRadius="4dp"
-            style="@style/SampleCard"
             />
 
 </LinearLayout>

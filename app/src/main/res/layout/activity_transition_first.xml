@@ -11,10 +11,7 @@
 		android:id="@+id/example.transition.header"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:background="@color/primary"
 		android:fitsSystemWindows="true"
-		android:elevation="@dimen/elevation_small"
-		app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
 		style="@style/ToolBar.WithNavigationBack"
 		>
 
@@ -98,5 +95,4 @@
 		app:fabSize="normal"
 		tools:ignore="RtlHardcoded"
 		/>
-
 </RelativeLayout>

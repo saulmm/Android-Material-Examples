@@ -10,8 +10,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import com.saulmm.material.R;
 
-public class ColorActivity2 extends AppCompatActivity {
+public class RevealSecondActivity extends AppCompatActivity {
 
+	private static final int FADE_DURATION_MILLIS = 800;
+	private static final int FADE_START_OFFSET = 300;
 	private TextView mHelpText;
 	private Toolbar mToolbar;
 	private View mContainer;
@@ -19,19 +21,25 @@ public class ColorActivity2 extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_color2);
+		setContentView(R.layout.activity_reveal_second);
 
 		mContainer = findViewById(R.id.activity_color2_container);
-		mToolbar = (Toolbar) findViewById(R.id.activity_color2_toolbar);
-		mHelpText = (TextView) findViewById(R.id.activity_color2_explanation_textview);
+		mToolbar = (Toolbar) findViewById(R.id.activity_reveal_toolbar);
+		mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override public void onClick(View v) {
+				onBackPressed();
+			}
+		});
+
+		mHelpText = (TextView) findViewById(R.id.activity_reveal_help_textview);
 		mHelpText.setVisibility(View.VISIBLE);
 
 		Animation translateToolbarAnimation = AnimationUtils.loadAnimation(this, R.anim.translate_up_on);
 		mToolbar.setAnimation(translateToolbarAnimation);
 
 		Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.abc_fade_in);
-		fadeIn.setStartOffset(300);
-		fadeIn.setDuration(800);
+		fadeIn.setStartOffset(FADE_START_OFFSET);
+		fadeIn.setDuration(FADE_DURATION_MILLIS);
 		mHelpText.setAnimation(fadeIn);
 
 		AnimationSet animationSet = new AnimationSet(true);
@@ -42,23 +50,16 @@ public class ColorActivity2 extends AppCompatActivity {
 
 	@Override
 	public void onBackPressed() {
-
 		Animation fadeOut = AnimationUtils.loadAnimation(this, R.anim.abc_fade_out);
 		fadeOut.setFillAfter(true);
 		mContainer.startAnimation(fadeOut);
 
 		fadeOut.setAnimationListener(new Animation.AnimationListener() {
-			@Override public void onAnimationStart(Animation animation) {
-
-			}
-
+			@Override public void onAnimationStart(Animation animation) {}
+			@Override public void onAnimationRepeat(Animation animation) {}
 			@Override public void onAnimationEnd(Animation animation) {
-				setResult(ColorActivity.SECOND_ACTIVITY_END);
+				setResult(RevealFirstActivity.SECOND_ACTIVITY_END);
 				populateOnBackPressed();
-			}
-
-			@Override public void onAnimationRepeat(Animation animation) {
-
 			}
 		});
 	}
