@@ -9,16 +9,16 @@
 	>
 
 	<android.support.v7.widget.Toolbar
-		android:id="@+id/activity.color2.toolbar"
+		android:id="@+id/activity.reveal.toolbar"
 		android:layout_width="match_parent"
-		android:layout_height="@dimen/toolbar_height"
+		android:layout_height="wrap_content"
 		app:title="@string/title_reveal_activity2"
 		style="@style/ToolBar.WithNavigationBack"
-	    app:theme="@style/ThemeOverlay.AppCompat.Light"
+	    android:background="@null"
 	    />
 
 	<TextView
-		android:id="@+id/activity.color2.explanation.textview"
+		android:id="@+id/activity.reveal.help.textview"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:padding="@dimen/spacing_medium"

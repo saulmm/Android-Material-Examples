@@ -69,7 +69,7 @@
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/activity.color.fab"
+        android:id="@+id/activity.reveal.fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

@@ -31,7 +31,6 @@
 	<style name="Text.Body">
 		<item name="android:lineSpacingExtra">4dp</item>
 		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
-
 	</style>
 
 	<style name="Text.Button">
@@ -55,11 +54,14 @@
 		<item name="android:minHeight">48dp</item>
 	</style>
 
-	<style name="ToolBar"/>
+	<style name="ToolBar">
+		<item name="android:background">?colorPrimary</item>
+		<item name="android:elevation">@dimen/elevation_small</item>
+		<item name="android:minHeight">?attr/actionBarSize</item>
+		<item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+	</style>
 
 	<style name="ToolBar.WithNavigationBack">
 		<item name="navigationIcon">@drawable/abc_ic_ab_back_mtrl_am_alpha</item>
 	</style>
-
-
 </resources>
