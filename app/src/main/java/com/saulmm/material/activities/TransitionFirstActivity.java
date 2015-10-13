@@ -1,6 +1,5 @@
 package com.saulmm.material.activities;
 
-import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,13 +19,18 @@ import com.saulmm.material.R;
 public class TransitionFirstActivity extends AppCompatActivity
     implements AdapterView.OnItemSelectedListener {
 
+    public static final String EXTRA_TRANSITION = "selected_transition";
+    public static final String TRANS_SLIDE = "slide";
+    public static final String TRANS_FADE = "fade";
+    public static final String TRANS_EXPLODE= "explode";
     private View mFabButton;
     private View mToolbar;
 
-    private final static int [] EXCLUDED_VIEWS = new int[] {
+    public final static int [] EXCLUDED_VIEWS = new int[] {
         android.R.id.navigationBarBackground,
         android.R.id.statusBarBackground,
     };
+    private String mSelectedTransition = TRANS_SLIDE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,59 +59,38 @@ public class TransitionFirstActivity extends AppCompatActivity
             TransitionFirstActivity.this, Pair.create(mFabButton, "fab"),
             Pair.create(mToolbar, "holder1"));
 
+        i.putExtra(EXTRA_TRANSITION, mSelectedTransition);
+
         startActivity(i, transitionActivityOptions.toBundle());
     }
 
-    @Override
+    @Override @SuppressWarnings("ConstantConditions")
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Transition exitTransition = null;
 
         switch (position) {
             case 0:
-                exitTransition = createSlideTransition(Gravity.BOTTOM, EXCLUDED_VIEWS);
+                exitTransition = new Slide(Gravity.BOTTOM);
+                mSelectedTransition = TRANS_SLIDE;
                 break;
             case 1:
-                exitTransition = createFadeTransition(EXCLUDED_VIEWS);
+                exitTransition = new Fade();
+                mSelectedTransition = TRANS_FADE;
                 break;
             case 2:
-                exitTransition = createExplodeTransition(EXCLUDED_VIEWS);
+                exitTransition = new Explode();
+                mSelectedTransition = TRANS_EXPLODE;
                 break;
         }
+        for (int excludeViewId : EXCLUDED_VIEWS)
+            exitTransition.excludeTarget(excludeViewId, true);
 
         getWindow().setExitTransition(exitTransition);
     }
 
-    public Transition createSlideTransition(int gravity, int [] excludeIds) {
-        Slide slideTransition = new Slide(gravity);
-
-        for (int excludeViewId : excludeIds)
-            slideTransition.excludeTarget(excludeViewId, true);
-
-        return slideTransition;
-    }
-
-    public Transition createFadeTransition(int [] excludeIds) {
-        Fade fadeTransition = new Fade();
-
-        for (int excludeViewId : excludeIds)
-            fadeTransition.excludeTarget(excludeViewId, true);
-
-        return fadeTransition;
-    }
-
-    public Transition createExplodeTransition(int [] excludeIds) {
-        Explode explodeTransition = new Explode();
-
-        for (int excludeViewId : excludeIds)
-            explodeTransition.excludeTarget(excludeViewId, true);
-
-        return explodeTransition;
-    }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         // Unused
     }
-
-
 }
