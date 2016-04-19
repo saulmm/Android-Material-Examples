@@ -1,75 +1,55 @@
 package com.saulmm.material.activities;
 
-import android.animation.Animator;
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.transition.Explode;
+import android.transition.Fade;
 import android.transition.Slide;
 import android.transition.Transition;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewPropertyAnimator;
-import android.widget.LinearLayout;
-
 import com.saulmm.material.R;
-import com.saulmm.material.utils.AnimatorAdapter;
-import com.saulmm.material.utils.TransitionAdapter;
 
-public class TransitionSecondActivity extends Activity {
-
-    private static final int SCALE_DELAY = 30;
-    private LinearLayout rowContainer;
+public class TransitionSecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition_second);
 
-        rowContainer = (LinearLayout) findViewById(R.id.row_container2);
-
-        Slide slideExitTransition = new Slide(Gravity.BOTTOM);
-        slideExitTransition.excludeTarget(android.R.id.navigationBarBackground, true);
-        slideExitTransition.excludeTarget(android.R.id.statusBarBackground, true);
-
-
-        getWindow().getEnterTransition().addListener(new TransitionAdapter() {
-
-            @Override
-            public void onTransitionEnd(Transition transition) {
-
-                super.onTransitionEnd(transition);
-
-                getWindow().getEnterTransition().removeListener(this);
-
-                for (int i = 0; i < rowContainer.getChildCount(); i++) {
-
-                    View rowView = rowContainer.getChildAt(i);
-                    rowView.animate().setStartDelay(i * SCALE_DELAY)
-                        .scaleX(1).scaleY(1);
-                }
+        Toolbar toolbar = (Toolbar) findViewById(R.id.example_transition_header);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                onBackPressed();
             }
         });
+
+        initEnterTransition();
     }
 
-    @Override
-    public void onBackPressed() {
+    private void initEnterTransition() {
+        String selectedTransition = getIntent().getExtras().getString(
+            TransitionFirstActivity.EXTRA_TRANSITION,
+            TransitionFirstActivity.TRANS_SLIDE);
 
-        for (int i = 0; i < rowContainer.getChildCount(); i++) {
+        Transition enterTransition = null;
 
-            View rowView = rowContainer.getChildAt(i);
+        if (selectedTransition.equals(TransitionFirstActivity.TRANS_SLIDE))
+            enterTransition = new Slide(Gravity.BOTTOM);
 
-            ViewPropertyAnimator propertyAnimator = rowView.animate()
-                .setStartDelay(i * SCALE_DELAY)
-                .scaleX(0).scaleY(0)
-                .setListener(new AnimatorAdapter() {
+        else if (selectedTransition.equals(TransitionFirstActivity.TRANS_FADE))
+            enterTransition = new Fade();
 
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
+        else if (selectedTransition.equals(TransitionFirstActivity.TRANS_EXPLODE))
+            enterTransition = new Explode();
 
-                        super.onAnimationEnd(animation);
-                        finishAfterTransition();
-                    }
-                });
-        }
+        enterTransition.excludeTarget(android.R.id.navigationBarBackground, true);
+        enterTransition.excludeTarget(android.R.id.statusBarBackground, true);
+        getWindow().setEnterTransition(enterTransition);
+    }
+
+    public void onFabCLick(View view) {
+        onBackPressed();
     }
 }

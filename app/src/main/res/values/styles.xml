@@ -1,8 +1,57 @@
 <resources>
+	<style name="ViewGroup"/>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-    </style>
+	<style name="ViewGroup.Main">
+		<item name="android:paddingTop">@dimen/spacing_medium</item>
+		<item name="android:paddingBottom">@dimen/spacing_medium</item>
+		<item name="android:paddingLeft">@dimen/spacing_medium</item>
+		<item name="android:paddingRight">@dimen/spacing_medium</item>
+	</style>
 
+	<style name="ViewGroup.Small">
+		<item name="android:paddingTop">@dimen/spacing_small</item>
+		<item name="android:paddingBottom">@dimen/spacing_small</item>
+		<item name="android:paddingLeft">@dimen/spacing_small</item>
+		<item name="android:paddingRight">@dimen/spacing_small</item>
+	</style>
+
+	<style name="Text"/>
+
+	<style name="Text.Body">
+		<item name="android:lineSpacingExtra">4dp</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+	</style>
+
+	<style name="Text.Button">
+		<item name="android:padding">@dimen/spacing_small_bigger</item>
+		<item name="android:background">?attr/selectableItemBackground</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
+		<item name="android:textColor">?colorAccent</item>
+		<item name="android:clickable">true</item>
+	</style>
+
+	<style name="Text.Title">
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+		<item name="android:fontFamily">sans-serif</item>
+	</style>
+
+	<style name="Text.Header">
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:paddingLeft">@dimen/spacing_medium</item>
+		<item name="android:textAllCaps">true</item>
+		<item name="android:fontFamily">sans-serif-medium</item>
+		<item name="android:textColor">?colorPrimary</item>
+		<item name="android:minHeight">48dp</item>
+	</style>
+
+	<style name="ToolBar">
+		<item name="android:background">?colorPrimary</item>
+		<item name="android:elevation">@dimen/elevation_small</item>
+		<item name="android:minHeight">?attr/actionBarSize</item>
+		<item name="theme">@style/ThemeOverlay.AppCompat.Dark</item>
+	</style>
+
+	<style name="ToolBar.WithNavigationBack">
+		<item name="navigationIcon">@drawable/abc_ic_ab_back_mtrl_am_alpha</item>
+	</style>
 </resources>

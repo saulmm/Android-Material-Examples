@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group android:checkableBehavior="single">
+		<item
+			android:id="@+id/drawer.transitions"
+			android:icon="@drawable/ic_transitions_grey"
+			android:title="@string/drawer.transitions"
+			/>
+
+		<item
+			android:id="@+id/nav_elevation_sample"
+			android:icon="@drawable/ic_elevation"
+			android:title="@string/drawer.elevation"
+			/>
+
+		<item
+			android:id="@+id/nav_circular_sample"
+			android:icon="@drawable/ic_circle"
+			android:title="@string/drawer.reveal"
+			/>
+
+		<item
+			android:id="@+id/drawer.cards"
+			android:icon="@drawable/ic_cards_grey"
+			android:title="Cards"
+			/>
+	</group>
+</menu>

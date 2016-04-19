@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">My Application</string>
+    <string name="app_name">Material Examples</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_my_activity2">MyActivity2</string>
     <string name="action_example">Example action</string>
+
+    <string name="title_activity_transition">Transitions example</string>
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
     <string name="title_activity_color">ColorActivity</string>
+    <string name="title_activity_my_activity2">MyActivity2</string>
+    <string name="title_activity_coordinator">Coordinator example</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_closed">Close</string>
 
@@ -26,6 +29,31 @@
         <item>#</item>
     </string-array>
 
+    <string-array name="transition_types">
+        <item>Slide</item>
+        <item>Fade</item>
+        <item>Explode</item>
+    </string-array>
+
     <string name="title_activity_elevation_sample">ElevationSampleActivity</string>
+    <string name="menu_github">Github</string>
+    <string name="material_text">This project focuses on different concepts and examples to illustrate the \'visual language\' Material Design.</string>
+    <string name="reveal_explanation">This is an independent activity of previous activity, if you hit the \'back\' button or the navigation arrow will return to the previous activity reversing the reveal animation</string>
+    <string name="reveal_start_help">Pressing the \'fab\' it will begin to transition as background in the next activity</string>
+    <string name="title_reveal_activity1">Reveal activity 1</string>
+    <string name="title_reveal_activity2">Reveal activity 2</string>
+    <string name="transitions_activity1_help">There are three types of predefined activity transitions, included in the Android Framework: Slide, Fade and Explode.\n
+
+\nThe Slide transition, accepts a Gravity in its construchor, which indicate from where they have to move (slide) the items containing the Activity.\n\n
+
+The Fade transition, changes the opacity of the elements of the layout, can be configured if the Fade will \'fade in\' or \'fade out\'.\n\n
+
+The Explode transition will translate out all elements mimicking an explosion.</string>
+    <string name="transitions_activity2_help">This activity shows how to be aware of the events of transitions, animations and implement accordingly</string>
+    <string name="header_transition_type">Transition type</string>
+    <string name="drawer.transitions">Activity transitions</string>
+    <string name="drawer.elevation">Elevation example</string>
+    <string name="drawer.reveal">Reveal sample</string>
+    <string name="cards.text1">I\'m a thing. But, like most politicians, he promised more than he could deliver. You won\'t have time for sleeping, soldier, not with all the bed making you\'ll be doing. Then we\'ll go with that data file! Hey, you add a one and two zeros to that or we walk! You\'re going to do his laundry? I\'ve got to find a way to escape.</string>
 
 </resources>

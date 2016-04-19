@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.saulmm.material" >
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.saulmm.material"
+	>
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label=""
-        android:theme="@style/AppTheme" >
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/MaterialExamplesTheme"
+		>
+		<activity
+			android:name=".activities.MainActivity"
+			android:theme="@style/MaterialExamplesTheme.Translucent"
+			>
 
-        <activity android:name="com.saulmm.material.activities.TransitionFirstActivity"
-            android:theme="@style/TransitionSampleActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+		<activity android:name=".activities.TransitionFirstActivity"/>
+		<activity android:name=".activities.TransitionSecondActivity"/>
 
-        <activity
-            android:name="com.saulmm.material.activities.TransitionSecondActivity"
-            android:theme="@style/TransitionSampleSecondActivity"/>
+		<activity android:name=".activities.RevealFirstActivity"
+			android:theme="@style/MaterialExamplesTheme.Translucent"
+			/>
 
-        <activity android:name="com.saulmm.material.activities.SlidingActivity" >
-        </activity>
-        <activity
-            android:name="com.saulmm.material.activities.DialerSampleActivity"
-            android:screenOrientation="portrait" >
+		<activity
+			android:name=".activities.RevealSecondActivity"
+			android:theme="@style/ColorActivityTheme2"
+			/>
 
-        </activity>
-        <activity
-            android:name="com.saulmm.material.activities.ColorActivity"
-            android:label="@string/title_activity_color" />
-        <activity
-            android:name="com.saulmm.material.activities.ElevationSampleActivity"
-            android:label="@string/title_activity_elevation_sample" >
-
-
-        </activity>
-    </application>
-
+		<activity android:name=".activities.CardsActivity"/>
+	</application>
 </manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="MaterialExamplesTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimary">@color/primary</item>
+		<item name="colorPrimaryDark">@color/primary.dark</item>
+		<item name="colorAccent">@color/accent</item>
+		<item name="android:windowBackground">@color/grey.light</item>
+		<item name="android:windowContentTransitions">true</item>
+		<item name="android:windowAllowEnterTransitionOverlap">true</item>
+		<item name="android:windowAllowReturnTransitionOverlap">true</item>
+		<item name="android:toolbarStyle">@style/ToolBar</item>
+	</style>
+
+	<style name="MaterialExamplesTheme.Translucent">
+		<item name="android:windowTranslucentStatus">true</item>
+	</style>
+
+	<style name="ColorActivityTheme2" parent="MaterialExamplesTheme">
+		<item name="android:windowBackground">@color/accent</item>
+		<item name="colorPrimaryDark">@color/accent.dark</item>
+	</style>
+
+</resources>
